@@ -1,0 +1,51 @@
+import { AppBar, Container, Toolbar, useTheme } from "@mui/material"
+import { useEffect, useState } from "react"
+
+const Navbar = () => {
+  const [scrolled,setScrolled]  =  useState(false);
+  const theme = useTheme();
+
+  useEffect(()=>{
+    const onScroll = () =>{
+        setScrolled(window.scrollY > 0);
+    }
+
+    window.addEventListener("scroll",onScroll);
+    return () => window.removeEventListener("scroll",onScroll)
+  },[])
+
+  const glassBg = 
+        theme.palette.mode === "light" 
+            ? "rgba(255,255,255,0.7)"
+            : "rgba(0,0,0,0.5)";
+
+  return (
+    <>
+        <AppBar
+            position="fixed"
+            elevation={0} // remove default shadow
+            sx={{
+                backgroundColor: scrolled ? glassBg : "transparent",
+                backdropFilter: scrolled ? "blur(12px)" : "none",
+                borderBottom: scrolled
+                    ? `1px solid ${
+                        theme.palette.mode === "light"
+                            ? "rgba(0,0,0,0.1)"
+                            : "rgba(255,255,255,0.2)"
+                    } `
+                    : "none",
+                transition: "all 0.2s ease"
+            }}
+
+        >
+            <Toolbar disableGutters> {/* disableGutters: Remove right and left padding */}
+                <Container maxWidth="lg">
+
+                </Container>
+            </Toolbar>
+        </AppBar>
+    </>
+  )
+}
+
+export default Navbar
