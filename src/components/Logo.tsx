@@ -3,10 +3,17 @@ import { IconButton } from '@mui/material';
 
 const Logo = () => {
   return (
-    <IconButton> {/* disableRipple = matiin efek “gelombang air” pas diklik */}
-        <LocalLibraryIcon fontSize='large'/>
+    <IconButton 
+        sx={{
+            backgroundColor: "#1a746b", // shade 400
+            borderRadius: '5px',
+            p:'6px'
+        }}
+        disableRipple // disableRipple = matiin efek “gelombang air” pas diklik
+    >
+        <LocalLibraryIcon fontSize='small' sx={{color: 'white'}}/>
     </IconButton>
   )
 }
 
-export default Logo
+export default Logo 
