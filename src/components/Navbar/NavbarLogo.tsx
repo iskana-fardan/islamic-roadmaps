@@ -5,7 +5,7 @@ const NavbarLogo = () => {
   return (
     <Box display={"flex"} alignItems={'center'} gap={1}>
         <Logo/>
-        <Typography variant="h6" fontWeight={'bold'}>
+        <Typography variant="subtitle1" fontWeight={'600'}>
             Islamic Roadmaps
         </Typography>
     </Box>
