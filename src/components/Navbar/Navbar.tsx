@@ -1,5 +1,6 @@
-import { AppBar, Container, Toolbar, useTheme } from "@mui/material"
+import { AppBar, Box, Container, Toolbar, useTheme } from "@mui/material"
 import { useEffect, useState } from "react"
+import NavbarLogo from "./NavbarLogo";
 
 const Navbar = () => {
   const [scrolled,setScrolled]  =  useState(false);
@@ -40,7 +41,16 @@ const Navbar = () => {
         >
             <Toolbar disableGutters> {/* disableGutters: Remove right and left padding */}
                 <Container maxWidth="lg">
+                    <Box 
+                        display={"flex"}
+                        alignItems={"center"}
+                        justifyContent={"space-between"}
+                        py={{xs: 1.5,md: 3}}
+                    >
+                        {/* Left */}
+                        <NavbarLogo/>
 
+                    </Box>
                 </Container>
             </Toolbar>
         </AppBar>
