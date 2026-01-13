@@ -39,13 +39,15 @@ const Navbar = () => {
             }}
 
         >
-            <Toolbar disableGutters> {/* disableGutters: Remove right and left padding */}
+            <Toolbar 
+                disableGutters // disableGutters: Remove right and left padding
+                sx={{minHeight : { xs : 52,md: 62}}}
+            > 
                 <Container maxWidth="lg">
                     <Box 
                         display={"flex"}
                         alignItems={"center"}
                         justifyContent={"space-between"}
-                        py={{xs: 1.5,md: 3}}
                     >
                         {/* Left */}
                         <NavbarLogo/>
