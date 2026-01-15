@@ -1,6 +1,7 @@
 import { AppBar, Box, Container, Toolbar, useTheme } from "@mui/material"
 import { useEffect, useState } from "react"
 import NavbarLogo from "./NavbarLogo";
+import NavbarLinks from "./NavbarLinks";
 
 const Navbar = () => {
   const [scrolled,setScrolled]  =  useState(false);
@@ -52,6 +53,20 @@ const Navbar = () => {
                         {/* Left */}
                         <NavbarLogo/>
 
+                        {/* Right */}
+                        <Box display={'flex'} alignItems={'center'} gap={1}>
+                            <Box sx={{ display: {xs:"none", md:"flex"}}}>
+                                {/* navlinks */}
+                                <NavbarLinks/>
+
+                                {/* colormodeswitch */}
+
+                            </Box>
+
+                            
+
+                        </Box>
+
                     </Box>
                 </Container>
             </Toolbar>
@@ -61,3 +76,4 @@ const Navbar = () => {
 }
 
 export default Navbar
+
