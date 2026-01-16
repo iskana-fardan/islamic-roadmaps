@@ -1,14 +1,19 @@
 import { Box } from "@mui/material"
-import Navbar from "./components/Navbar/Navbar"
-import { BrowserRouter } from "react-router-dom"
+import Navbar from "./components/Navbar/Navbar";
+import { BrowserRouter } from "react-router-dom";
+import ColorModeProvider from "./theme/ColorModeProvider";
 
-const App = () => {
+function App() {
+
+
   return (
-    <BrowserRouter>
-      <Navbar/>
-      <Box height={'1500px'}></Box>
-    </BrowserRouter>
-  )
+    <ColorModeProvider>
+        <BrowserRouter>
+          <Navbar/>
+          <Box height={'1500px'}></Box>
+        </BrowserRouter>
+    </ColorModeProvider>
+  );
 }
 
-export default App
+export default App;

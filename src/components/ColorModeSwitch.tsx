@@ -1,15 +1,16 @@
 import { DarkMode, LightMode } from "@mui/icons-material";
-import { IconButton } from "@mui/material"
-import { useState } from "react"
+import { IconButton, useTheme } from "@mui/material"
+import { useColorMode } from "../theme/useColorMode";
 
 const ColorModeSwitch = () => {
-  const [mode,setMode] = useState("dark");
+  const theme = useTheme();
+  const {toggleColorMode} = useColorMode();
 
 
   return (
     <IconButton
         disableRipple
-        onClick={()=>setMode(mode === "dark" ? "light" : "dark")}
+        onClick={toggleColorMode}
         sx={{
             fontSize: 16, // icon ikut ini
             color: "lightgrey",
@@ -19,7 +20,7 @@ const ColorModeSwitch = () => {
             },
         }}
     >
-        {mode === "dark" ? <DarkMode sx={{ fontSize: "inherit" }} /> : <LightMode sx={{ fontSize: "inherit" }}  />}
+        {theme.palette.mode === "dark" ?  <LightMode sx={{ fontSize: "inherit" }}  /> : <DarkMode sx={{ fontSize: "inherit" }} /> }
     </IconButton>
     )
 }
