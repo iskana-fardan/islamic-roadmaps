@@ -3,24 +3,20 @@ import CloseIcon from '@mui/icons-material/Close';
 import { NavLink, useLocation } from "react-router-dom";
 import { LightModeOutlined, DarkModeOutlined } from "@mui/icons-material";
 import { useColorMode } from "../../theme/useColorMode";
+import { useNavItems } from "./useNavItems";
 
 interface Props {
     open: boolean
     onClose: () => void
 }
 
-const navItems = [
-    { label: "Home", path: "/" },
-    { label: "Categories", path: "/categories" },
-    { label: "About", path: "/about" },
-
-]
-
 const MobileMenu = ({ open, onClose }:Props) => {
   const theme = useTheme();
-
+  const navItems = useNavItems();
   const location = useLocation();
   const {toggleColorMode} = useColorMode();
+
+  
   return (
     <Drawer
         anchor="right"

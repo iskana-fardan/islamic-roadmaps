@@ -1,17 +1,11 @@
 import { Box, Button } from "@mui/material"
 import { NavLink, useLocation } from "react-router-dom"
-
-
-
-const navItems = [
-    { label: "Home", path: "/" },
-    { label: "Categories", path: "/categories" },
-    { label: "About", path: "/about" },
-
-]
+import { useNavItems } from "./useNavItems";
 
 const NavbarLinks = () => {
-  const location = useLocation()
+  const navItems = useNavItems();
+  const location = useLocation();
+
 
   return (
     <Box sx={{ display: "flex", gap: 1 }}>
