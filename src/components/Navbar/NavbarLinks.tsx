@@ -29,12 +29,12 @@ const NavbarLinks = () => {
               borderRadius: "5px",
               fontSize: "12px",
               // default
-              color: "white",
+              color: "text.primary",
 
               // hover
               "&:hover": {
                 backgroundColor: "rgba(100,100,100,0.1)",
-                color:"white"
+                color:"text.primary"
               },
 
               // selected / active

@@ -13,7 +13,7 @@ const ColorModeSwitch = () => {
         onClick={toggleColorMode}
         sx={{
             fontSize: 16, // icon ikut ini
-            color: "lightgrey",
+            color: "text.primary",
             borderRadius: "5px",
             "&:hover": {
             backgroundColor: "rgba(100,100,100,0.1)",
