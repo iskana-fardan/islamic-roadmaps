@@ -8,12 +8,12 @@ interface Props {
 }
 
 const ColorModeProvider = ({ children }: Props) => {
-  const [mode, setMode] = useState<"light" | "dark">("light");
+  const [mode, setMode] = useState<"dark" | "light" >("dark");
 
   const colorMode = useMemo(
     () => ({
       toggleColorMode: () => {
-        setMode((prev) => (prev === "light" ? "dark" : "light"));
+        setMode((prev) => (prev ===  "dark" ? "light"  : "dark"));
       },
     }),
     []
