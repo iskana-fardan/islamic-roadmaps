@@ -1,4 +1,4 @@
-import { DarkMode, LightMode } from "@mui/icons-material";
+import { DarkModeOutlined, LightModeOutlined } from "@mui/icons-material";
 import { IconButton, useTheme } from "@mui/material"
 import { useColorMode } from "../theme/useColorMode";
 
@@ -20,7 +20,7 @@ const ColorModeSwitch = () => {
             },
         }}
     >
-        {theme.palette.mode === "dark" ?  <LightMode sx={{ fontSize: "inherit" }}  /> : <DarkMode sx={{ fontSize: "inherit" }} /> }
+        {theme.palette.mode === "dark" ?  <LightModeOutlined sx={{ fontSize: "inherit" }}  /> : <DarkModeOutlined sx={{ fontSize: "inherit" }} /> }
     </IconButton>
     )
 }
