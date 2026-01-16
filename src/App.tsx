@@ -1,4 +1,4 @@
-import { Box } from "@mui/material"
+import { Box, Button } from "@mui/material"
 import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter } from "react-router-dom";
 import ColorModeProvider from "./theme/ColorModeProvider";
@@ -10,7 +10,11 @@ function App() {
     <ColorModeProvider>
         <BrowserRouter>
           <Navbar/>
-          <Box height={'1500px'}></Box>
+          <Box height={'1500px'} display={'flex'} alignItems={'start'}>
+            <Button sx={{marginTop: "100px"}}>
+              Hello world
+            </Button>
+          </Box>
         </BrowserRouter>
     </ColorModeProvider>
   );

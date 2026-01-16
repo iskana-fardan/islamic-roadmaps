@@ -19,6 +19,8 @@ export const getTheme = (mode: Theme) =>
               paper: "#ffffff",
             },
 
+            glassBackground: "rgba(255,255,255,0.5)",
+
             text: {
               primary: "#0f172a",
               secondary: "#475569",
@@ -36,6 +38,8 @@ export const getTheme = (mode: Theme) =>
               default: "#0b0f0e", // background utama
               paper: "#111716",   // card / surface
             },
+
+            glassBackground: "rgba(0,0,0,0.5)",
 
             text: {
               primary: "#e5e7eb",

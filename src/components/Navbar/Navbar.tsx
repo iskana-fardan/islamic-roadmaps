@@ -17,10 +17,6 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll",onScroll)
   },[])
 
-  const glassBg = 
-        theme.palette.mode === "light" 
-            ? "rgba(255,255,255,0.7)"
-            : "rgba(0,0,0,0.5)";
 
   return (
     <>
@@ -28,15 +24,9 @@ const Navbar = () => {
             position="fixed"
             elevation={0} // remove default shadow
             sx={{
-                backgroundColor: scrolled ? glassBg : "transparent",
+                backgroundColor: scrolled ? theme.palette.glassBackground : "transparent",
                 backdropFilter: scrolled ? "blur(12px)" : "none",
-                borderBottom: scrolled
-                    ? `1px solid ${
-                        theme.palette.mode === "light"
-                            ? "rgba(0,0,0,0.1)"
-                            : "rgba(255,255,255,0.2)"
-                    } `
-                    : "none",
+                borderBottom: `1px solid ${theme.palette.divider}`,
                 transition: "all 0.2s ease"
             }}
 
