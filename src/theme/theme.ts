@@ -7,6 +7,12 @@ export const getTheme = (mode: Theme) =>
     palette: {
       mode,
 
+      level: {
+        beginner: "#22c55e",     
+        intermediate: "#3b82f6", 
+        advanced: "#a855f7",   
+      },
+
       ...(mode === "light"
         ? {
             // LIGHT MODE 
@@ -53,11 +59,7 @@ export const getTheme = (mode: Theme) =>
     shape: {
       borderRadius: 12,
     },
-    //   level: {
-    //     beginner: "#22c55e",     // HIJAU
-    //     intermediate: "#3b82f6", // BIRU
-    //     advanced: "#a855f7",     // UNGU
-    //   },
-    // nanti eksplore lagi, cari cara pakai ini atau cara extend ini di mui
+    
+  
   });
 
