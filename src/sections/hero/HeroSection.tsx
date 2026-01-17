@@ -108,7 +108,8 @@ const HeroSection = () => {
                             display: "flex",
                             gap: 1,
                             justifyContent: "center",
-                            alignItems:"center"
+                            alignItems:"center",
+                            backgroundColor: theme.palette.teal[100]
                         }}
                     >
                         Explore Learning Paths
@@ -164,7 +165,7 @@ const HeroSection = () => {
                                     width: 8,
                                     height: 8,
                                     borderRadius: "50%",
-                                    backgroundColor : "#14b8a6",
+                                    backgroundColor : theme.palette.teal[100],
                                     transform: "translateY(-1.8px)"
                                 }}
                             />

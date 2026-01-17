@@ -8,6 +8,11 @@ declare module "@mui/material/styles" {
       advanced: string;
     };
     glassBackground: string;
+    teal: {
+        100: string,
+        200: string,
+        300: string,
+      },
   }
 
   interface PaletteOptions {
@@ -17,5 +22,10 @@ declare module "@mui/material/styles" {
       advanced: string;
     };
     glassBackground?: string;
+    teal?: {
+        100: string,
+        200: string,
+        300: string,
+      },
   }
 }

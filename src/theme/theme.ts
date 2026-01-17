@@ -7,6 +7,13 @@ export const getTheme = (mode: Theme) =>
     palette: {
       mode,
 
+      // teals
+      teal: {
+        100: "#1a746b",
+        200: "#145e57",
+        300: "#0f4a45",
+      },
+
       level: {
         beginner: "#22c55e",     
         intermediate: "#3b82f6", 
