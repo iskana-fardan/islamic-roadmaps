@@ -3,6 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import ColorModeProvider from "./theme/ColorModeProvider";
 import HeroSection from "./sections/hero/HeroSection";
 import AboutSection from "./sections/about/AboutSection";
+import FooterSection from "./sections/footer/FooterSection";
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
           <Navbar/>
           <HeroSection/>
           <AboutSection/>
+          <FooterSection/>
         </BrowserRouter>
     </ColorModeProvider>
   );
