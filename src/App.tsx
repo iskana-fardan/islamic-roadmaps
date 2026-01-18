@@ -2,7 +2,7 @@ import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter } from "react-router-dom";
 import ColorModeProvider from "./theme/ColorModeProvider";
 import HeroSection from "./sections/hero/HeroSection";
-import { Box } from "@mui/material";
+import AboutSection from "./sections/about/AboutSection";
 
 function App() {
 
@@ -12,7 +12,7 @@ function App() {
         <BrowserRouter>
           <Navbar/>
           <HeroSection/>
-          <Box sx={{backgroundColor: 'grey', height: '1200px'}}/>
+          <AboutSection/>
         </BrowserRouter>
     </ColorModeProvider>
   );
