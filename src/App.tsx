@@ -4,6 +4,7 @@ import ColorModeProvider from "./theme/ColorModeProvider";
 import HeroSection from "./sections/hero/HeroSection";
 import AboutSection from "./sections/about/AboutSection";
 import FooterSection from "./sections/footer/FooterSection";
+import LearningApproachSection from "./sections/learning-approach/LearningApproachSection";
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
           <Navbar/>
           <HeroSection/>
           <AboutSection/>
+          <LearningApproachSection/>
           <FooterSection/>
         </BrowserRouter>
     </ColorModeProvider>
