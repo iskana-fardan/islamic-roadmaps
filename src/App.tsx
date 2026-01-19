@@ -5,6 +5,7 @@ import HeroSection from "./sections/hero/HeroSection";
 import FooterSection from "./sections/footer/FooterSection";
 import LearningApproachSection from "./sections/learning-approach/LearningApproachSection";
 import LearningCategoriesSection from "./sections/learning-categories/LearningCategoriesSection";
+import RoadmapDetailPage from "./features/roadmaps/RoadmapDetailPage";
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
         <BrowserRouter>
           <Navbar/>
           <HeroSection/>
+          <RoadmapDetailPage/>
           {/* <AboutSection/> */}
           <LearningCategoriesSection/>
           <LearningApproachSection/>
