@@ -2,9 +2,9 @@ import MenuBookRoundedIcon from "@mui/icons-material/MenuBookRounded";
 import BalanceRoundedIcon from "@mui/icons-material/BalanceRounded";
 
 export const icons = {
-  fiqh: MenuBookRoundedIcon,
-  nahwu: MenuBookRoundedIcon,
+  fiqh_syafii: MenuBookRoundedIcon,
   usul_fiqh: BalanceRoundedIcon,
+  nahwu: MenuBookRoundedIcon,
   sorof: MenuBookRoundedIcon,
 };
 
