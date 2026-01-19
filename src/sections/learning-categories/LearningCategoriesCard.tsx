@@ -1,7 +1,7 @@
 import { Card, CardContent, Stack, Box, Typography, IconButton, useTheme } from "@mui/material"
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import { icons } from "./LearningCategoriesCards";
-import type { IconKey } from "./LearningCategoriesCards";
+import { icons } from "../../assets/icons/icon";
+import type { IconKey } from "../../assets/icons/icon";
 
 
 interface Props {
