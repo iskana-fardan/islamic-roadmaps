@@ -45,6 +45,7 @@ const LearningCategoriesCard = ({name, nameArabic, description, icon }:Props) =>
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
+                        flexShrink: 0
                         
                       }}
                     >
