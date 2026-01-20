@@ -7,14 +7,35 @@ import {
   Typography,
 } from "@mui/material"
 import ExpandMoreRoundedIcon from "@mui/icons-material/ExpandMoreRounded"
-import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
-import KitabDarsCard from "./KitabDarsCard";
+import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined"
+import { useState } from "react"
+import KitabDarsCard from "./KitabDarsCard"
 
 
+interface Props {
+  title: string,
+  total: number,
+  color: string
+}
 
-const RoadmapLevel = ({ title, subtitle, color }) => {
+const RoadmapLevel = ({  title , total, color }: Props) => {
+  const [expanded, setExpanded] = useState(false)
+  const [completed, setCompleted] = useState(1)
+
   return (
-    <Accordion disableGutters>
+    <Accordion
+      expanded={expanded}
+      onChange={() => setExpanded(!expanded)}
+      disableGutters
+      sx={{
+        bgcolor: "#0b0b0b",
+        borderLeft: "2px solid",
+        borderColor: "divider",
+        "&::before": {
+          display: "none",
+        },
+      }}
+    >
       <AccordionSummary expandIcon={<ExpandMoreRoundedIcon />}>
         <Stack direction="row" spacing={2} alignItems="center">
           <Box
@@ -25,28 +46,46 @@ const RoadmapLevel = ({ title, subtitle, color }) => {
               bgcolor: color,
               display: "flex",
               alignItems: "center",
-              justifyContent: "center"
+              justifyContent: "center",
             }}
           >
-            <SchoolOutlinedIcon fontSize="small"/>
+            <SchoolOutlinedIcon fontSize="small" />
           </Box>
+
           <Box>
             <Typography fontWeight={600}>{title}</Typography>
             <Typography variant="body2" color="text.secondary">
-              {subtitle}
+              {completed} of {total} completed
             </Typography>
           </Box>
         </Stack>
       </AccordionSummary>
 
-      <AccordionDetails>
-        {/* NANTI: card kitab per level */}
-        <Box sx={{ mt:2 }}>
-          <KitabDarsCard/>
-        </Box>
+      <AccordionDetails
+        sx={{
+          position: "relative",
+          pl: 4,
+          "&::before": {
+            content: '""',
+            position: "absolute",
+            left: 16,
+            top: 0,
+            width: 2,
+            height: expanded ? "100%" : 0,
+            bgcolor: "divider",
+            transition: "height .3s ease",
+          },
+        }}
+      >
+        <KitabDarsCard
+          completed={completed === 1}
+          onToggle={() =>
+            setCompleted((prev) => (prev === 1 ? 0 : 1))
+          }
+        />
       </AccordionDetails>
     </Accordion>
   )
 }
 
-export default RoadmapLevel;
+export default RoadmapLevel

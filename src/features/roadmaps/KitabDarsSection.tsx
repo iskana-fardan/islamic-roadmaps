@@ -23,17 +23,17 @@ const KitabPelajaranSection = () => {
       <Stack spacing={1}>
         <RoadmapLevel
           title="Dasar (Beginner)"
-          subtitle="0 of 2 completed"
+          total = {2}
           color={theme.palette.level.beginner}
         />
         <RoadmapLevel
           title="Menengah (Intermediate)"
-          subtitle="0 of 1 completed"
+          total = {2}
           color={theme.palette.level.intermediate}
         />
         <RoadmapLevel
           title="Lanjutan (Advanced)"
-          subtitle="0 of 1 completed"
+          total = {2}
           color={theme.palette.level.advanced}
         />
       </Stack>
