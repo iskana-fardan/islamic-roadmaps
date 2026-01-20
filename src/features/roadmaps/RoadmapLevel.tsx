@@ -8,6 +8,7 @@ import {
 } from "@mui/material"
 import ExpandMoreRoundedIcon from "@mui/icons-material/ExpandMoreRounded"
 import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
+import KitabDarsCard from "./KitabDarsCard";
 
 
 
@@ -40,9 +41,9 @@ const RoadmapLevel = ({ title, subtitle, color }) => {
 
       <AccordionDetails>
         {/* NANTI: card kitab per level */}
-        <Typography variant="body2" color="text.secondary">
-          Kitab list goes here...
-        </Typography>
+        <Box sx={{ mt:2 }}>
+          <KitabDarsCard/>
+        </Box>
       </AccordionDetails>
     </Accordion>
   )
