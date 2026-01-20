@@ -1,7 +1,20 @@
-import { Box, Button, Container, IconButton, Stack, Typography, useTheme } from "@mui/material"
+import { Box, Button, Container, Stack, Typography, useTheme } from "@mui/material"
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+import {  NavLink } from "react-router-dom";
+
+
+
 const HeroSection = () => {
   const theme = useTheme();
+
+
+  const scrollToCategories= () => 
+        document
+        .getElementById("categories")
+        ?.scrollIntoView({ behavior: "smooth" })
+        
+  
+
   return (
     <Box
         component={'section'}
@@ -97,27 +110,25 @@ const HeroSection = () => {
                     }}
                 >
                     <Button 
+                        disableRipple
                         size="medium"
                         variant="contained"
+                        onClick={ scrollToCategories }
+                        endIcon={<ArrowDownwardIcon sx={{ fontSize: 17 }}/>}
                         sx={{
                             textTransform: "none",
                             borderRadius: '5px',
-                            color: "text.primary",
                             py:1,
                             px: 4,
-                            display: "flex",
-                            gap: 1,
-                            justifyContent: "center",
-                            alignItems:"center",
                             backgroundColor: theme.palette.teal[100]
                         }}
                     >
                         Explore Learning Paths
-                        <IconButton disableRipple sx={{py:0}}>
-                            <ArrowDownwardIcon sx={{fontSize: "17px"}} />
-                        </IconButton>
                     </Button>
                     <Button 
+                        disableRipple
+                        component={NavLink}
+                        to="/about"
                         size="medium" 
                         variant="outlined"  
                         sx={{
@@ -129,6 +140,7 @@ const HeroSection = () => {
                             px: 4,
                             "&:hover": {
                                 border: `1px solid ${theme.palette.divider}`,
+                                color:"text.primary"
                             }
                         }}>
                         Learn More
