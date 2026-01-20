@@ -14,10 +14,12 @@ const LearningCategoriesSection = () =>{
   return (
     <Box
       component="section"
+      id="categories"
       sx={{
         py: { xs: 6,sm: 7, md: 9,lg : 11 },
         backgroundColor: theme.palette.background.paper
       }}
+      
     >
       <Container maxWidth="lg">
         <LearningCategoriesHeader/>
