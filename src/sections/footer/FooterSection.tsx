@@ -12,6 +12,7 @@ const FooterSection = () => {
             mt: 10,
             pt: 8,
             pb: 4,
+            width: "100vw",
             backgroundColor: "background.paper",
         }}
     >
