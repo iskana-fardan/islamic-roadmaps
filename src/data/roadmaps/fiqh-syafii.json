@@ -1,0 +1,41 @@
+{
+  "id": "fiqh_syafii",
+  "field": "fiqh-syafii",
+  "title": "Fiqh Mazhab Syafi'i",
+  "titleArabic": "الفقه الشافعي",
+  "description": "Roadmap pembelajaran Fiqh Syafii dari dasar hingga lanjutan",
+  "icon": "fiqh_syafii",
+  "levels": [
+    {
+      "id": "beginner",
+      "label": "Beginner",
+      "order": 1,
+      "dars": [
+        {
+          "id": "ajurrumiyyah",
+          "bookId": "ajurrumiyyah",
+          "affectsProgress": true
+        }
+      ]
+    },
+    {
+      "id": "intermediate",
+      "label": "Intermediate",
+      "order": 2,
+      "dars": []
+    },
+    {
+      "id": "advanced",
+      "label": "Advanced",
+      "order": 3,
+      "dars": []
+    }
+  ],
+  "muthalaah": [
+    {
+      "id": "qawaid-nahwiyyah",
+      "bookId": "qawaid-nahwiyyah",
+      "label": "Pengayaan"
+    }
+  ]
+}
