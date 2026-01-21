@@ -1,14 +1,14 @@
-import { Box, Card, CardContent, Chip, Container, Grid, IconButton, Stack, Typography, useTheme } from '@mui/material'
+import { Box, Container, IconButton, Stack, Typography, useTheme } from '@mui/material'
 import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded"
 import MenuBookRoundedIcon from "@mui/icons-material/MenuBookRounded"
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined"
 import MenuBookOutlinedIcon from '@mui/icons-material/MenuBookOutlined';
 import RoadmapLevel from './RoadmapLevel'
 import BookOutlinedIcon from '@mui/icons-material/BookOutlined';
-import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlined';
 import { getFieldBySlug } from '../../data/fields';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { getRoadmapByFieldId } from '../../data/roadmaps';
+import KitabMuthalaahCard from './KitabMuthalaahCards';
 
 
 
@@ -210,49 +210,11 @@ const RoadmapDetailPage = () => {
                 </Typography>
               </Stack>
             </Stack>
-            
 
-          <Grid container spacing={3}>
-            <Grid size={{ xs:12, sm:6 }}>
-              <Card variant="outlined">
-                <CardContent>
-                  <Stack mb={2} direction={"row"} gap={1} alignItems={"flex-start"}  justifyContent={"space-between"}>
-                    <Stack direction={"row"} gap={1} alignItems={"center"}>
-                      <BookOutlinedIcon sx={{ color:theme.palette.teal[100]}} />
-                    
-                      <Stack>
-                        <Typography fontWeight={600} >
-                          Bidayatul Mujtahid
-                        </Typography>
-                        <Typography color="text.secondary">
-                          بداية المجتهد
-                        </Typography>
-                      </Stack>
-                    </Stack>
+            {/* cards for enrichment books */}
+            <KitabMuthalaahCard/>
 
-                    <BookmarkBorderOutlinedIcon sx={{ color:theme.palette.teal[100]}} />
-                  </Stack>
-                  <Typography variant="body2" color="text.secondary">
-                    Comparative fiqh masterpiece analyzing evidences
-                  </Typography>
-
-                  <Stack direction="row" justifyContent="space-between" mt={2}>
-                    <Typography variant="caption" color="text.secondary">
-                      by Ibn Rushd
-                    </Typography>
-                    <Chip 
-                      label="Enrichment" 
-                      size="small" 
-                      sx={{ borderRadius: "5px" }} 
-                      />
-                  </Stack>
-                </CardContent>
-              </Card>
-            </Grid>
-
-            {/* lanjut sendiri */}
-          </Grid>
-    </Container>
+        </Container>
     
     </Box>
   )
