@@ -4,7 +4,7 @@ import ColorModeProvider from "./theme/ColorModeProvider";
 import HeroSection from "./sections/hero/HeroSection";
 import FooterSection from "./sections/footer/FooterSection";
 import LearningApproachSection from "./sections/learning-approach/LearningApproachSection";
-import RoadmapDetailPage from "./features/roadmaps/RoadmapDetailPage";
+import RoadmapDetailPage from "./features/roadmaps/Roadmap";
 import FieldList from "./features/fields/FieldList";
 
 function App() {
