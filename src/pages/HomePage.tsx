@@ -1,13 +1,13 @@
 import HeroSection from '../sections/hero/HeroSection'
-import LearningCategoriesSection from '../sections/learning-categories/LearningCategoriesSection'
 import LearningApproachSection from '../sections/learning-approach/LearningApproachSection'
+import FieldList from '../features/fields/FieldList'
 
 const HomePage = () => {
   return (
     <>
         <HeroSection/>
 
-        <LearningCategoriesSection/>
+        <FieldList/>
 
         <LearningApproachSection/>
     </>

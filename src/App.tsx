@@ -4,8 +4,8 @@ import ColorModeProvider from "./theme/ColorModeProvider";
 import HeroSection from "./sections/hero/HeroSection";
 import FooterSection from "./sections/footer/FooterSection";
 import LearningApproachSection from "./sections/learning-approach/LearningApproachSection";
-import LearningCategoriesSection from "./sections/learning-categories/LearningCategoriesSection";
 import RoadmapDetailPage from "./features/roadmaps/RoadmapDetailPage";
+import FieldList from "./features/fields/FieldList";
 
 function App() {
 
@@ -17,7 +17,7 @@ function App() {
           <HeroSection/>
           <RoadmapDetailPage/>
           {/* <AboutSection/> */}
-          <LearningCategoriesSection/>
+          <FieldList/>
           <LearningApproachSection/>
           <FooterSection/>
         </BrowserRouter>

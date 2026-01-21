@@ -12,7 +12,7 @@ interface Props {
    
 }
 
-const LearningCategoriesCard = ({name, nameArabic, description, icon }:Props) => {
+const FieldCard = ({name, nameArabic, description, icon }:Props) => {
     const theme = useTheme();
 
     const Icon = icons[icon];
@@ -104,4 +104,4 @@ const LearningCategoriesCard = ({name, nameArabic, description, icon }:Props) =>
   )
 }
 
-export default LearningCategoriesCard
+export default FieldCard
