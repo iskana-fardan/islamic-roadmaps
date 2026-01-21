@@ -43,7 +43,7 @@ const FieldList= () =>{
 
         {/* Cards */}
         <Grid container spacing={3}>
-          {fields.map(({ name, nameArabic, description, icon }, index) => {
+          {fields.map(({ name,slug, nameArabic, description, icon }, index) => {
             return (
                 <Grid
                     key={index}
@@ -51,6 +51,7 @@ const FieldList= () =>{
                     >
                         <FieldCard 
                             name={name} 
+                            slug={slug}
                             nameArabic={nameArabic} 
                             description={description} 
                             icon={icon}

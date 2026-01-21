@@ -1,18 +1,20 @@
-import { Card, CardContent, Stack, Box, Typography, IconButton, useTheme } from "@mui/material"
+import { Card, CardContent, Stack, Box, Typography, IconButton, useTheme, CardActionArea } from "@mui/material"
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { icons } from "../../assets/icons/icon";
 import type { IconKey } from "../../assets/icons/icon";
+import { NavLink } from "react-router-dom";
 
 
 interface Props {
     name: string;
+    slug: string;
     nameArabic: string
     description: string
     icon: IconKey
    
 }
 
-const FieldCard = ({name, nameArabic, description, icon }:Props) => {
+const FieldCard = ({name,slug, nameArabic, description, icon }:Props) => {
     const theme = useTheme();
 
     const Icon = icons[icon];
@@ -20,6 +22,8 @@ const FieldCard = ({name, nameArabic, description, icon }:Props) => {
   return (
     
               <Card
+                component={NavLink}
+                to={`/roadmap/${slug}`}
                 variant="outlined"
                 sx={{
                   height: "100%",
@@ -32,74 +36,83 @@ const FieldCard = ({name, nameArabic, description, icon }:Props) => {
                   },
                 }}
               >
-                <CardContent>
-                  <Stack spacing={2}  direction="row">
-                    {/* Icon */}
-                    <Box
-                      sx={{
-                        width: 44,
-                        height: 44,
-                        borderRadius: "7px",
-                        bgcolor: theme.palette.teal[100],
-                        color: "text.primary",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        flexShrink: 0
-                        
-                      }}
-                    >
-                      { Icon && <Icon/> }
-                    </Box>
+                <CardActionArea
+                  disableRipple
+                >
+                  <CardContent>
+                    <Stack spacing={2}  direction="row">
+                      {/* Icon */}
+                      <Box
+                        sx={{
+                          width: 44,
+                          height: 44,
+                          borderRadius: "7px",
+                          bgcolor: theme.palette.teal[100],
+                          color: "text.primary",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          flexShrink: 0
+                          
+                        }}
+                      >
+                        { Icon && <Icon/> }
+                      </Box>
 
-                    {/* Title  & desc*/}
-                    <Stack spacing={1.5}>
-                      <Stack spacing={0.7}>
-                            <Typography fontSize={"1.1rem"} fontWeight={600} sx={{ wordSpacing: 3 }}>
-                                {name}{" "}
-                                <Typography
-                                component="span"
-                                variant="body2"
-                                color="text.secondary"
-                                >
-                                {nameArabic}
-                                </Typography>
-                            </Typography>
+                      {/* Title  & desc*/}
+                      <Stack spacing={1.5}>
+                        <Stack spacing={0.7}>
+                              <Typography 
+                                    color="text.primary"
+                                    fontSize={"1.1rem"} 
+                                    fontWeight={600} 
+                                    sx={{ wordSpacing: 3 }}
+                                  >
+                                    {name}{" "}
+                                  <Typography
+                                    component="span"
+                                    variant="body2"
+                                    color="text.secondary"
+                                  >
+                                    {nameArabic}
+                                  </Typography>
+                              </Typography>
 
-                            <Typography
-                                variant="body2"
-                                color="text.secondary"
-                            >
-                                {description}
-                            </Typography>
+                              <Typography
+                                  variant="body2"
+                                  color="text.secondary"
+                              >
+                                  {description}
+                              </Typography>
+                        </Stack>
+
+
+                        {/* Action */}
+                          <Box>
+                              <IconButton
+                                  disableRipple
+                                  sx={{ 
+                                      color: theme.palette.teal[100],
+                                      borderRadius:"5px",
+                                      p:1,
+                                      "&:hover": {
+                                          backgroundColor: "rgba(100,100,100,0.1)",
+                                      },
+                                      fontSize: "1rem"
+                                  }}
+
+                                  
+                              >
+                                  <Typography variant="caption" mr={0.5}>
+                                  View Roadmap
+                                  </Typography>
+                                  <ArrowForwardIcon sx={{ "&:hover": { transform: "translateX(2px)" } }} fontSize="inherit"/>
+                              </IconButton>
+                          </Box>
                       </Stack>
-
-
-                      {/* Action */}
-                        <Box>
-                            <IconButton
-                                disableRipple
-                                sx={{ 
-                                    color: theme.palette.teal[100],
-                                    borderRadius:"5px",
-                                    p:1,
-                                    "&:hover": {
-                                        backgroundColor: "rgba(100,100,100,0.1)",
-                                    },
-                                    fontSize: "1rem"
-                                }}
-
-                                
-                            >
-                                <Typography variant="caption" mr={0.5}>
-                                View Roadmap
-                                </Typography>
-                                <ArrowForwardIcon sx={{ "&:hover": { transform: "translateX(2px)" } }} fontSize="inherit"/>
-                            </IconButton>
-                        </Box>
                     </Stack>
-                  </Stack>
                 </CardContent>
+                </CardActionArea>
               </Card>
   )
 }
