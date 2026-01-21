@@ -38,6 +38,9 @@ export const fields: Field[] = [
                         others as Field
                     ]
 
+export const getFieldBySlug = (slug:string) => fields.find(f => f.slug === slug)
+
+
 // as Field = type assertion (paksaan ke TypeScript)
 // Artinya lo bilang ke TS:
 // “Gue yakin data ini bentuknya sesuai interface Field. Percaya aja.”
