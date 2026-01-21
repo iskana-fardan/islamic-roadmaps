@@ -1,4 +1,5 @@
-import type { IconKey } from "../../assets/icons/icon"
+import type { IconKey } from "../../assets/icons/icon";
+import rawFields from "./fields.json";
 
 interface Field {
     id: string;
@@ -12,33 +13,9 @@ interface Field {
 
 
 
-import fiqhsyafii from "./fiqh-syafii.json"
-import usulfiqh from "./usul-fiqh.json"
-import nahwu from "./nahwu.json"
-import sharaf from "./sharaf.json"
-import balaghah from "./balaghah.json"
-import hadits from "./hadits.json"
-import aqidah from "./aqidah.json"
-import tafsir from "./tafsir.json"
-import ulumulquran from "./ulumul-quran.json"
-import others from "./others.json"
+export const fields = rawFields as Field[]
 
-
-
-export const fields: Field[] = [ 
-                        fiqhsyafii as Field, 
-                        usulfiqh as Field, 
-                        nahwu as Field, 
-                        sharaf as Field, 
-                        balaghah as Field, 
-                        hadits as Field, 
-                        aqidah as Field, 
-                        tafsir as Field, 
-                        ulumulquran as Field, 
-                        others as Field
-                    ]
-
-export const getFieldBySlug = (slug:string|undefined) => fields.find(f => f.slug === slug)
+export const getFieldBySlug = (slug?:string) => fields.find(f => f.slug === slug)
 
 
 // as Field = type assertion (paksaan ke TypeScript)

@@ -1,9 +1,0 @@
-{
-  "id": "tafsir",
-  "slug": "tafsir",
-  "name": "Tafsir",
-  "nameArabic": "التفسير",
-  "description": "Menyelami makna ayat-ayat Al-Qur'an melalui penafsiran para ulama.",
-  "icon": "tafsir",
-  "order": 8
-}
