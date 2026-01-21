@@ -1,0 +1,9 @@
+{
+  "id": "hadits",
+  "slug": "hadits",
+  "name": "Hadits & Musthalah",
+  "nameArabic": "الحديث ومصطلحه",
+  "description": "Mengenal hadits Nabi ﷺ sekaligus cara menilai keabsahan dan kualitas riwayatnya.",
+  "icon": "hadits",
+  "order": 6
+}

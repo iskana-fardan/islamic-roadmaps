@@ -1,0 +1,9 @@
+{
+  "id": "ulumul_quran",
+  "slug": "ulumul-quran",
+  "name": "Ulumul Qur'an",
+  "nameArabic": "علوم القرآن",
+  "description": "Memahami Al-Qur'an dari sisi sejarah turunnya, qira'at, hingga ilmu-ilmu pendukungnya.",
+  "icon": "ulumul_quran",
+  "order": 9
+}

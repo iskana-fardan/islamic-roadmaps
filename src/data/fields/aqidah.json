@@ -1,0 +1,9 @@
+{
+  "id": "aqidah",
+  "slug": "aqidah",
+  "name": "Aqidah",
+  "nameArabic": "العقيدة",
+  "description": "Membangun keyakinan yang lurus tentang Allah, iman, dan dasar-dasar keislaman.",
+  "icon": "aqidah",
+  "order": 7
+}

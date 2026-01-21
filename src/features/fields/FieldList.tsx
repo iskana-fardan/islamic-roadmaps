@@ -7,7 +7,7 @@ import {
   useTheme,
 } from "@mui/material"
 import FieldCard from "./FieldCard";
-import { fields } from "../../data/fields/fields";
+import { fields } from "../../data/fields/index.ts";
 
 
 
