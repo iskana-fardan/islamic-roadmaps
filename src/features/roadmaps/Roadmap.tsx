@@ -6,13 +6,45 @@ import MenuBookOutlinedIcon from '@mui/icons-material/MenuBookOutlined';
 import RoadmapLevel from './RoadmapLevel'
 import BookOutlinedIcon from '@mui/icons-material/BookOutlined';
 import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlined';
+import { getFieldBySlug } from '../../data/fields';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import { getRoadmapByFieldId } from '../../data/roadmaps';
 
 
 
 
 const RoadmapDetailPage = () => {
   const theme = useTheme();
-  return (
+
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const backToCategories = () => {
+    const scrollToAnchor= () => {
+      document
+        .getElementById("categories")
+        ?.scrollIntoView({ behavior: "smooth" })
+    }
+    
+  
+    if (location.pathname !== "/"){
+      navigate("/")
+      setTimeout(scrollToAnchor,150)
+    }else {
+      scrollToAnchor()
+    }
+  }
+
+
+
+
+
+  const {slug} = useParams()
+  const field = getFieldBySlug(slug);
+  const roadmap = getRoadmapByFieldId(field?.id);
+
+  if (roadmap) {
+      return (
     <Box component="main">
 
 
@@ -20,18 +52,27 @@ const RoadmapDetailPage = () => {
         {/* ===== header ===== */}
         {/* ===== header ===== */}
         <Container maxWidth="md">
-          <Stack spacing={3} py={6}>
+          <Stack  spacing={3} mt={11} mx={1} py={2}>
             {/* Back */}
-            <IconButton
-              disableRipple
-              size="small"
-              sx={{ alignSelf: "flex-start", alignItems: "center" }}
-            >
-              <ArrowBackRoundedIcon fontSize="small" />
-              <Typography variant="body2" ml={1}>
-                Back to Categories
-              </Typography>
-            </IconButton>
+                <IconButton
+                  disableRipple
+                  sx={{ 
+                    alignSelf: "flex-start", 
+                    alignItems: "center",
+                    fontSize: "18px", 
+                    borderRadius: "5px",
+                    "&:hover": {
+                        backgroundColor: "rgba(100,100,100,0.1)",
+                        color:"text.primary"
+                    },
+                  }}
+                  onClick={()=> backToCategories ()}
+                >
+                  <ArrowBackRoundedIcon fontSize='inherit' />
+                  <Typography ml={1.2} fontSize= "0.75rem">
+                    Back to Categories
+                  </Typography>
+                </IconButton>
 
             {/* Title */}
             <Stack direction="row" spacing={2} alignItems="center">
@@ -52,13 +93,13 @@ const RoadmapDetailPage = () => {
 
               <Box>
                 <Typography variant="h4" fontWeight={700}>
-                  Fiqh{" "}
+                  {roadmap?.title}{" "}
                   <Typography
                     component="span"
                     variant="h6"
                     color="text.secondary"
                   >
-                    الفقه
+                    { roadmap?.titleArabic }
                   </Typography>
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
@@ -69,8 +110,7 @@ const RoadmapDetailPage = () => {
 
             {/* Description */}
             <Typography color="text.secondary">
-              Islamic jurisprudence covering worship, transactions,
-              and daily life rulings
+                { roadmap?.description }
             </Typography>
           </Stack>
         </Container>
@@ -216,6 +256,8 @@ const RoadmapDetailPage = () => {
     
     </Box>
   )
+  }
+  
 }
 
 export default RoadmapDetailPage

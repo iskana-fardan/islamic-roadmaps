@@ -6,4 +6,4 @@ export const roadmaps = [
         nahwu
 ]
 
-export const getRoadmapByFieldId = (fieldId:string) => roadmaps.find(f => f.id === fieldId)
+export const getRoadmapByFieldId = (fieldId:string | undefined) => roadmaps.find(f => f.id === fieldId)

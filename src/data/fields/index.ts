@@ -38,7 +38,7 @@ export const fields: Field[] = [
                         others as Field
                     ]
 
-export const getFieldBySlug = (slug:string) => fields.find(f => f.slug === slug)
+export const getFieldBySlug = (slug:string|undefined) => fields.find(f => f.slug === slug)
 
 
 // as Field = type assertion (paksaan ke TypeScript)
