@@ -10,15 +10,18 @@ import ExpandMoreRoundedIcon from "@mui/icons-material/ExpandMoreRounded"
 import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined"
 import { useState } from "react"
 import KitabDarsCard from "./KitabDarsCard"
+import type { Book } from "../../types/book"
 
 
 interface Props {
+  books: (Book | undefined)[],
   title: string,
   total: number,
-  color: string
+  color: string,
+  onOpen: () => void
 }
 
-const RoadmapLevel = ({  title , total, color }: Props) => {
+const RoadmapLevel = ({books,  title , total, color, onOpen }: Props) => {
   const [expanded, setExpanded] = useState(false)
   const [completed, setCompleted] = useState(1)
 
@@ -78,6 +81,8 @@ const RoadmapLevel = ({  title , total, color }: Props) => {
         }}
       >
         <KitabDarsCard
+          books={books}
+          onOpen={onOpen}
           completed={completed === 1}
           onToggle={() =>
             setCompleted((prev) => (prev === 1 ? 0 : 1))

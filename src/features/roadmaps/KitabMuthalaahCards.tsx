@@ -3,15 +3,21 @@ import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlin
 import BookOutlinedIcon from '@mui/icons-material/BookOutlined';
 import BookmarkOutlinedIcon from '@mui/icons-material/BookmarkOutlined';
 import { useState } from "react";
+import type { Book } from "../../types/book";
 
+interface Props {
+  books: (Book | undefined)[],
+  onOpen: () => void
+}
 
-const KitabMuthalaahCard = () => {
+const KitabMuthalaahCard = ({books,onOpen}:Props) => {
   const [ completed, setCompleted ] = useState(false);
   const theme = useTheme();
   return (
     <Grid container spacing={3}>
             <Grid size={{ xs:12, sm:6 }}>
-              <Card 
+              {books.map(book => (
+                 <Card 
                   variant="outlined"
                   sx={{ 
                     position: "relative",
@@ -27,7 +33,7 @@ const KitabMuthalaahCard = () => {
                       : {},
                   }}
                 >
-                <CardActionArea disableRipple>
+                <CardActionArea disableRipple onClick={onOpen}> 
                        <CardContent>
                           <Stack mb={2} direction={"row"} gap={1} alignItems={"flex-start"}  justifyContent={"space-between"}>
                               <Stack direction={"row"} gap={1} alignItems={"center"}>
@@ -35,10 +41,10 @@ const KitabMuthalaahCard = () => {
                               
                                   <Stack>
                                     <Typography fontWeight={600} sx={{ textDecoration : completed ? "line-through" : "none" }} >
-                                      Bidayatul Mujtahid
+                                      {book?.title}
                                     </Typography>
                                     <Typography color="text.secondary">
-                                      بداية المجتهد
+                                      {book?.titleArabic}
                                     </Typography>
                                   </Stack>
                               </Stack>
@@ -55,15 +61,15 @@ const KitabMuthalaahCard = () => {
                           </Stack>
                           
                           <Typography variant="body2" color="text.secondary">
-                            Comparative fiqh masterpiece analyzing evidences
+                            {book?.description}
                           </Typography>
 
                           <Stack direction="row" justifyContent="space-between" mt={2}>
                               <Typography variant="caption" color="text.secondary">
-                                by Ibn Rushd
+                                {book?.author}
                               </Typography>
                               <Chip 
-                                label="Enrichment" 
+                                label={book?.type}
                                 size="small" 
                                 sx={{ borderRadius: "5px" }} 
                                 />
@@ -71,6 +77,7 @@ const KitabMuthalaahCard = () => {
                       </CardContent>
                 </CardActionArea>
               </Card>
+              ))}
             </Grid>
             {/* lanjut sendiri */}
     </Grid>

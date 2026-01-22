@@ -9,11 +9,15 @@ import { getFieldBySlug } from '../../data/fields';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { getRoadmapByFieldId } from '../../data/roadmaps';
 import KitabMuthalaahCard from './KitabMuthalaahCards';
+import BookDetail from '../books/BookDetail';
+import { useState } from 'react';
+import { getBookById } from '../../data/books';
 
 
 
 
 const RoadmapDetailPage = () => {
+  const [ open, setOpen ] = useState(false);
   const theme = useTheme();
 
   const location = useLocation();
@@ -42,6 +46,27 @@ const RoadmapDetailPage = () => {
   const {slug} = useParams()
   const field = getFieldBySlug(slug);
   const roadmap = getRoadmapByFieldId(field?.id);
+
+
+  // ambil book id
+  const beginnerLevel = roadmap?.levels.find(level => level.id === "beginner");
+
+  const beginnerBooksIds = beginnerLevel?.dars.map( d => d.bookId ) ?? []
+
+ const booksForCardBeginner =
+  beginnerBooksIds
+    .map(id => getBookById(id))
+    .filter(Boolean)
+
+// ambil buku muthalaah
+const muthalaahBooksIds = roadmap?.muthalaah.map( d => d.bookId) ?? []
+
+const booksForMuthalaahCard = muthalaahBooksIds?.map( id => getBookById(id)).filter(Boolean);
+
+
+  
+
+                            
 
   if (roadmap) {
       return (
@@ -174,19 +199,25 @@ const RoadmapDetailPage = () => {
 
             <Stack spacing={1}>
               <RoadmapLevel
+                books={booksForCardBeginner}
                 title="Dasar (Beginner)"
                 total = {2}
                 color={theme.palette.level.beginner}
+                onOpen={()=>setOpen(true)} 
               />
               <RoadmapLevel
+                books={booksForCardBeginner}
                 title="Menengah (Intermediate)"
                 total = {2}
                 color={theme.palette.level.intermediate}
+                onOpen={()=>setOpen(true)} 
               />
               <RoadmapLevel
+                books={booksForCardBeginner}
                 title="Lanjutan (Advanced)"
                 total = {2}
                 color={theme.palette.level.advanced}
+                onOpen={()=>setOpen(true)} 
               />
             </Stack>
         </Container>
@@ -212,10 +243,12 @@ const RoadmapDetailPage = () => {
             </Stack>
 
             {/* cards for enrichment books */}
-            <KitabMuthalaahCard/>
+            <KitabMuthalaahCard books={booksForMuthalaahCard} onOpen={()=>setOpen(true)} />
 
         </Container>
     
+     {/* Book Detail */}
+     <BookDetail open={open} onClose={()=>setOpen(false)}/>
     </Box>
   )
   }

@@ -8,34 +8,41 @@ import {
   useTheme,
 } from "@mui/material"
 import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded"
+import type { Book } from "../../types/book"
 
-type Props = {
+interface Props  {
+  books: (Book | undefined)[]
   completed: boolean
   onToggle: () => void
+  onOpen : () => void
 }
 
-const KitabDarsCard = ({ completed, onToggle }: Props) => {
+const KitabDarsCard = ({books, completed, onToggle, onOpen }: Props) => {
   const theme =  useTheme();
   return (
-    <Card
-      sx={{
-        position: "relative",
-        background: "none",
-        border: `1px solid ${theme.palette.divider}` ,
-        bgcolor: completed ? "rgba(255,255,255,0.04)" : "transparent",
-        transition: "all .2s ease",
-        "&::after": completed
-          ? {
-              content: '""',
-              position: "absolute",
-              inset: 0,
-              bgcolor: "rgba(0,0,0,0.35)",
-              pointerEvents: "none",
-            }
-          : {},
-      }}
+    <>
+      {books.map(b => (
+      <Card
+        key={b?.id}
+        sx={{
+          position: "relative",
+          background: "none",
+          border: `1px solid ${theme.palette.divider}` ,
+          bgcolor: completed ? "rgba(255,255,255,0.04)" : "transparent",
+          transition: "all .2s ease",
+          "&::after": completed
+            ? {
+                content: '""',
+                position: "absolute",
+                inset: 0,
+                bgcolor: "rgba(0,0,0,0.35)",
+                pointerEvents: "none",
+              }
+            : {},
+        }}
     >
       <CardActionArea
+        onClick={onOpen}
         disableRipple
         sx={{
           "&:hover .hover-arrow": {
@@ -67,7 +74,7 @@ const KitabDarsCard = ({ completed, onToggle }: Props) => {
                     opacity: completed ? 0.6 : 1,
                   }}
                 >
-                  Safinatun Najah
+                  {b?.title}
                 </Typography>
 
                 <Typography
@@ -75,7 +82,7 @@ const KitabDarsCard = ({ completed, onToggle }: Props) => {
                   color="text.secondary"
                   sx={{ fontFamily: "serif",mt:3 }}
                 >
-                  سفينة النجاة
+                  {b?.titleArabic}
                 </Typography>
               </Box>
 
@@ -84,8 +91,7 @@ const KitabDarsCard = ({ completed, onToggle }: Props) => {
                 color="text.secondary"
                 sx={{ mt: 0.5 }}
               >
-                A concise primer on the fundamentals of worship according to the
-                Shafi'i school. Essential for beginners.
+                {b?.description}
               </Typography>
 
               <Typography
@@ -93,7 +99,7 @@ const KitabDarsCard = ({ completed, onToggle }: Props) => {
                 color="text.disabled"
                 sx={{ mt: 0.75, display: "block" }}
               >
-                by Syaikh Salim bin Sumair al-Hadhrami
+                {b?.author}
               </Typography>
             </Box>
 
@@ -111,6 +117,8 @@ const KitabDarsCard = ({ completed, onToggle }: Props) => {
         </CardContent>
       </CardActionArea>
     </Card>
+    ))}
+    </>
   )
 }
 

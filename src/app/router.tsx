@@ -20,7 +20,7 @@ export const router = createBrowserRouter([
                 path: "/roadmap/:slug", // : artinya, bagian dari URL yg bersifat dinamis, 
                 element: <RoadmapDetailPage/>                        // a.k.a apapun setelah roadmap akan ditangkap s
                                         // ebagai parameter bernama slug
-            }
+            },
             // {
             //     path: "/",
             //     element: <NotFoundPage />
