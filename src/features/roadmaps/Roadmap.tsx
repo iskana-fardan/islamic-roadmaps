@@ -11,7 +11,7 @@ import { getRoadmapByFieldId } from '../../data/roadmaps';
 import KitabMuthalaahCard from './KitabMuthalaahCards';
 import BookDetail from '../books/BookDetail';
 import { useState } from 'react';
-import { getBookById } from '../../data/books';
+import { getBooksByLevel, getMuthalaahBooks } from '../../data/roadmapHelpers';
 
 
 
@@ -48,23 +48,16 @@ const RoadmapDetailPage = () => {
   const roadmap = getRoadmapByFieldId(field?.id);
 
 
-  // ambil book id
-  const beginnerLevel = roadmap?.levels.find(level => level.id === "beginner");
-
-  const beginnerBooksIds = beginnerLevel?.dars.map( d => d.bookId ) ?? []
-
- const booksForCardBeginner =
-  beginnerBooksIds
-    .map(id => getBookById(id))
-    .filter(Boolean)
-
-// ambil buku muthalaah
-const muthalaahBooksIds = roadmap?.muthalaah.map( d => d.bookId) ?? []
-
-const booksForMuthalaahCard = muthalaahBooksIds?.map( id => getBookById(id)).filter(Boolean);
+  // Books per level
+  const beginnerBooks = getBooksByLevel(roadmap, "beginner")
+  const intermediateBooks = getBooksByLevel(roadmap, "intermediate")
+  const advancedBooks = getBooksByLevel(roadmap, "advanced")
 
 
-  
+
+
+  // muthalaah books
+  const muthalaahBooks = getMuthalaahBooks(roadmap)
 
                             
 
@@ -199,21 +192,21 @@ const booksForMuthalaahCard = muthalaahBooksIds?.map( id => getBookById(id)).fil
 
             <Stack spacing={1}>
               <RoadmapLevel
-                books={booksForCardBeginner}
+                books={beginnerBooks}
                 title="Dasar (Beginner)"
                 total = {2}
                 color={theme.palette.level.beginner}
                 onOpen={()=>setOpen(true)} 
               />
               <RoadmapLevel
-                books={booksForCardBeginner}
+                books={intermediateBooks}
                 title="Menengah (Intermediate)"
                 total = {2}
                 color={theme.palette.level.intermediate}
                 onOpen={()=>setOpen(true)} 
               />
               <RoadmapLevel
-                books={booksForCardBeginner}
+                books={advancedBooks}
                 title="Lanjutan (Advanced)"
                 total = {2}
                 color={theme.palette.level.advanced}
@@ -243,7 +236,7 @@ const booksForMuthalaahCard = muthalaahBooksIds?.map( id => getBookById(id)).fil
             </Stack>
 
             {/* cards for enrichment books */}
-            <KitabMuthalaahCard books={booksForMuthalaahCard} onOpen={()=>setOpen(true)} />
+            <KitabMuthalaahCard books={muthalaahBooks} onOpen={()=>setOpen(true)} />
 
         </Container>
     
