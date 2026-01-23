@@ -40,6 +40,7 @@ export interface Book {
   titleArabic: string;
   author: string;
   type: BookType;
+  level: string;
   field: string; // bisa dipersempit ke FieldId nanti
   description: string;
   recommendedUsage: string;
