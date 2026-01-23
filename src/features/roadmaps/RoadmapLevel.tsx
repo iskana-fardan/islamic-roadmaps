@@ -16,14 +16,13 @@ import type { Book } from "../../types/book"
 interface Props {
   books: (Book | undefined)[],
   title: string,
-  total: number,
   color: string,
  
 }
 
-const RoadmapLevel = ({books,  title , total, color }: Props) => {
+const RoadmapLevel = ({books,  title , color }: Props) => {
   const [expanded, setExpanded] = useState(false)
-  const [completed, setCompleted] = useState(1)
+  const [completed, setCompleted] = useState(0)
 
   return (
     <Accordion
@@ -58,7 +57,7 @@ const RoadmapLevel = ({books,  title , total, color }: Props) => {
           <Box>
             <Typography fontWeight={600}>{title}</Typography>
             <Typography variant="body2" color="text.secondary">
-              {completed} of {total} completed
+              {completed} of {books.length} completed
             </Typography>
           </Box>
         </Stack>

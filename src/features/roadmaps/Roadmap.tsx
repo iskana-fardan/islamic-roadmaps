@@ -191,19 +191,16 @@ const RoadmapDetailPage = () => {
               <RoadmapLevel
                 books={beginnerBooks}
                 title="Dasar (Beginner)"
-                total = {2}
                 color={theme.palette.level.beginner}
               />
               <RoadmapLevel
                 books={intermediateBooks}
                 title="Menengah (Intermediate)"
-                total = {2}
                 color={theme.palette.level.intermediate}
               />
               <RoadmapLevel
                 books={advancedBooks}
                 title="Lanjutan (Advanced)"
-                total = {2}
                 color={theme.palette.level.advanced}
               />
             </Stack>
