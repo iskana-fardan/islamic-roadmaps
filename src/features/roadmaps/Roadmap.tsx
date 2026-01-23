@@ -9,15 +9,12 @@ import { getFieldBySlug } from '../../data/fields';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { getRoadmapByFieldId } from '../../data/roadmaps';
 import KitabMuthalaahCard from './KitabMuthalaahCards';
-import BookDetail from '../books/BookDetail';
-import { useState } from 'react';
 import { getBooksByLevel, getMuthalaahBooks } from '../../data/roadmapHelpers';
 
 
 
 
 const RoadmapDetailPage = () => {
-  const [ open, setOpen ] = useState(false);
   const theme = useTheme();
 
   const location = useLocation();
@@ -196,21 +193,18 @@ const RoadmapDetailPage = () => {
                 title="Dasar (Beginner)"
                 total = {2}
                 color={theme.palette.level.beginner}
-                onOpen={()=>setOpen(true)} 
               />
               <RoadmapLevel
                 books={intermediateBooks}
                 title="Menengah (Intermediate)"
                 total = {2}
                 color={theme.palette.level.intermediate}
-                onOpen={()=>setOpen(true)} 
               />
               <RoadmapLevel
                 books={advancedBooks}
                 title="Lanjutan (Advanced)"
                 total = {2}
                 color={theme.palette.level.advanced}
-                onOpen={()=>setOpen(true)} 
               />
             </Stack>
         </Container>
@@ -236,12 +230,12 @@ const RoadmapDetailPage = () => {
             </Stack>
 
             {/* cards for enrichment books */}
-            <KitabMuthalaahCard books={muthalaahBooks} onOpen={()=>setOpen(true)} />
+            <KitabMuthalaahCard books={muthalaahBooks} />
 
         </Container>
     
      {/* Book Detail */}
-     <BookDetail open={open} onClose={()=>setOpen(false)}/>
+     {/* <BookDetail open={open} onClose={()=>setOpen(false)}/> */}
     </Box>
   )
   }

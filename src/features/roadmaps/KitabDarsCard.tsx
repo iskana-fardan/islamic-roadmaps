@@ -9,21 +9,23 @@ import {
 } from "@mui/material"
 import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded"
 import type { Book } from "../../types/book"
+import BookDetail from "../books/BookDetail"
+import { useState } from "react"
 
 interface Props  {
   books: (Book | undefined)[]
   completed: boolean
   onToggle: () => void
-  onOpen : () => void
 }
 
-const KitabDarsCard = ({books, completed, onToggle, onOpen }: Props) => {
+const KitabDarsCard = ({books, completed, onToggle}: Props) => {
+  const [ open, setOpen ] = useState(false);
   const theme =  useTheme();
   return (
     <>
-      {books.map(b => (
+      {books.map(book => (
       <Card
-        key={b?.id}
+        key={book?.id}
         sx={{
           position: "relative",
           background: "none",
@@ -42,7 +44,7 @@ const KitabDarsCard = ({books, completed, onToggle, onOpen }: Props) => {
         }}
     >
       <CardActionArea
-        onClick={onOpen}
+        onClick={()=> setOpen(true)}
         disableRipple
         sx={{
           "&:hover .hover-arrow": {
@@ -74,7 +76,7 @@ const KitabDarsCard = ({books, completed, onToggle, onOpen }: Props) => {
                     opacity: completed ? 0.6 : 1,
                   }}
                 >
-                  {b?.title}
+                  {book?.title}
                 </Typography>
 
                 <Typography
@@ -82,7 +84,7 @@ const KitabDarsCard = ({books, completed, onToggle, onOpen }: Props) => {
                   color="text.secondary"
                   sx={{ fontFamily: "serif",mt:3 }}
                 >
-                  {b?.titleArabic}
+                  {book?.titleArabic}
                 </Typography>
               </Box>
 
@@ -91,7 +93,7 @@ const KitabDarsCard = ({books, completed, onToggle, onOpen }: Props) => {
                 color="text.secondary"
                 sx={{ mt: 0.5 }}
               >
-                {b?.description}
+                {book?.description}
               </Typography>
 
               <Typography
@@ -99,7 +101,7 @@ const KitabDarsCard = ({books, completed, onToggle, onOpen }: Props) => {
                 color="text.disabled"
                 sx={{ mt: 0.75, display: "block" }}
               >
-                {b?.author}
+                {book?.author}
               </Typography>
             </Box>
 
@@ -116,6 +118,8 @@ const KitabDarsCard = ({books, completed, onToggle, onOpen }: Props) => {
           </Box>
         </CardContent>
       </CardActionArea>
+
+      <BookDetail book={book} open={open} onClose={()=>setOpen(false)}/>
     </Card>
     ))}
     </>

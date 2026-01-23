@@ -4,13 +4,14 @@ import BookOutlinedIcon from '@mui/icons-material/BookOutlined';
 import BookmarkOutlinedIcon from '@mui/icons-material/BookmarkOutlined';
 import { useState } from "react";
 import type { Book } from "../../types/book";
+import BookDetail from "../books/BookDetail";
 
 interface Props {
   books: (Book | undefined)[],
-  onOpen: () => void
 }
 
-const KitabMuthalaahCard = ({books,onOpen}:Props) => {
+const KitabMuthalaahCard = ({books}:Props) => {
+  const [ open, setOpen ] = useState(false);
   const [ completed, setCompleted ] = useState(false);
   const theme = useTheme();
   return (
@@ -33,7 +34,7 @@ const KitabMuthalaahCard = ({books,onOpen}:Props) => {
                       : {},
                   }}
                 >
-                <CardActionArea disableRipple onClick={onOpen}> 
+                <CardActionArea disableRipple onClick={()=>setOpen(true)}> 
                        <CardContent>
                           <Stack mb={2} direction={"row"} gap={1} alignItems={"flex-start"}  justifyContent={"space-between"}>
                               <Stack direction={"row"} gap={1} alignItems={"center"}>
@@ -76,6 +77,7 @@ const KitabMuthalaahCard = ({books,onOpen}:Props) => {
                           </Stack>
                       </CardContent>
                 </CardActionArea>
+                <BookDetail book={book} open={open} onClose={()=>setOpen(false)}/>
               </Card>
               ))}
             </Grid>

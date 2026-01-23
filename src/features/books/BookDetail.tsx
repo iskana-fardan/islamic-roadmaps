@@ -4,28 +4,23 @@ import CloseRoundedIcon from "@mui/icons-material/CloseRounded"
 import ImportContactsOutlinedIcon from '@mui/icons-material/ImportContactsOutlined';
 import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
 import VerifiedOutlinedIcon from '@mui/icons-material/VerifiedOutlined';
+import type { Book } from "../../types/book";
 
 
 interface Props {
+    book: (Book | undefined),
     open: boolean,
     onClose: () => void
 }
 
 
-const BookDetail = ({open, onClose}: Props) => {
+const BookDetail = ({book,open, onClose}: Props) => {
     const theme = useTheme();
     return (
         <Drawer
             anchor="bottom"
             open={open}
             onClose={onClose}
-            // slotProps={{
-            //     paper: {
-            //         sx: {
-            //             minHeight: {xs:"85vh", sm: "80vh"}
-            //         }
-            //     }
-            // }}
         >
             <Box p={3} >
                 {/* === Header ===*/}
@@ -58,13 +53,13 @@ const BookDetail = ({open, onClose}: Props) => {
                             
                             <Stack>
                                 <Typography fontWeight={700}>
-                                    Minhaj at-Talibin
+                                    {book?.title}
                                 </Typography>
                                 <Typography
                                     variant="body2"
                                     color="text.secondary"
                                 >
-                                    منهاج الطالبين
+                                    {book?.titleArabic}
                                 </Typography>
                             </Stack>
                         </Stack>
@@ -103,7 +98,7 @@ const BookDetail = ({open, onClose}: Props) => {
                         Author
                     </Typography>
                     <Typography variant="body2">
-                        Iskana Fardan
+                        {book?.author}
                     </Typography>
                 </Stack>
 
@@ -119,7 +114,7 @@ const BookDetail = ({open, onClose}: Props) => {
                         Description
                     </Typography>
                     <Typography variant="body2">
-                        Foundational text covering the essential chapters of Shafi'i fiqh from purification to inheritance.
+                        {book?.description}
                     </Typography>
                  </Box>
 
@@ -136,7 +131,7 @@ const BookDetail = ({open, onClose}: Props) => {
                         Recommended Usage
                     </Typography>
                     <Typography variant="body2">
-                        Study this book sequentially with a qualified teacher. Complete understanding before moving to the next level.
+                        {book?.recommendedUsage}
                     </Typography>
                  </Box>
 
@@ -155,10 +150,7 @@ const BookDetail = ({open, onClose}: Props) => {
                     </Typography>
 
                     <Stack spacing={1.5}>
-                        {[
-                            {publisher:"blabla",note: "blabla", type: "blabla"},
-                            {publisher:"blabla",note: "blabla", type: "blabla"}
-                        ].map((ed, i) => (
+                        {book?.recommendedEditions.map((ed, i) => (
                         <Box
                             key={i}
                             sx={{
@@ -184,9 +176,9 @@ const BookDetail = ({open, onClose}: Props) => {
 
                             <Chip
                             size="small"
-                            label={ed.type}
-                            color={ed.type === "Recommended" ? "primary" : "default"}
-                            variant={ed.type === "Recommended" ? "filled" : "outlined"}
+                            label={ed.publisher}
+                            color={ed.label === "recommended" ? "primary" : "default"}
+                            variant={ed.label === "recommended" ? "filled" : "outlined"}
                             />
                         </Box>
                         ))}

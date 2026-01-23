@@ -18,10 +18,10 @@ interface Props {
   title: string,
   total: number,
   color: string,
-  onOpen: () => void
+ 
 }
 
-const RoadmapLevel = ({books,  title , total, color, onOpen }: Props) => {
+const RoadmapLevel = ({books,  title , total, color }: Props) => {
   const [expanded, setExpanded] = useState(false)
   const [completed, setCompleted] = useState(1)
 
@@ -82,7 +82,6 @@ const RoadmapLevel = ({books,  title , total, color, onOpen }: Props) => {
       >
         <KitabDarsCard
           books={books}
-          onOpen={onOpen}
           completed={completed === 1}
           onToggle={() =>
             setCompleted((prev) => (prev === 1 ? 0 : 1))
