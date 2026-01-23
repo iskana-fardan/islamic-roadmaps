@@ -23,6 +23,7 @@ const KitabDarsCard = ({books, completed, onToggle}: Props) => {
   const theme =  useTheme();
   return (
     <>
+      {books.length === 0 && '-'}
       {books.map(book => (
       <Card
         key={book?.id}
