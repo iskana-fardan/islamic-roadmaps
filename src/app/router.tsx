@@ -3,6 +3,7 @@ import RootLayout from "./layout";
 import HomePage from "../pages/HomePage";
 import AboutPage from "../pages/AboutPage";
 import RoadmapDetailPage from "../features/roadmaps/Roadmap";
+import CollaboratorsPage from "../pages/CollaboratorsPage";
 
 export const router = createBrowserRouter([
     {
@@ -21,6 +22,10 @@ export const router = createBrowserRouter([
                 element: <RoadmapDetailPage/>                        // a.k.a apapun setelah roadmap akan ditangkap s
                                         // ebagai parameter bernama slug
             },
+            {
+                path: "/collaborators",
+                element: <CollaboratorsPage/>
+            }
             // {
             //     path: "/",
             //     element: <NotFoundPage />
