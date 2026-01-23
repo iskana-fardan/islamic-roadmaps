@@ -1,0 +1,18 @@
+ {
+    "id": "al-tathbiq-al-sorofi",
+    "title": "Al-Tathbiq Al-Sorofi",
+    "titleArabic": "التطبيق الصرفي",
+    "author": "Ulama Bahasa Arab",
+    "type": "muthalaah",
+    "field": "sharaf",
+    "description": "Kitab yang fokus pada penerapan kaidah sharaf melalui contoh-contoh praktis.",
+    "recommendedUsage": "Menguatkan praktik tashrif dan pemahaman kaidah",
+    "resources": [],
+    "recommendedEditions": [
+      {
+        "publisher": "Dar Al-Fikr",
+        "note": "Membantu menguatkan praktik tashrif",
+        "label": "recommended"
+      }
+    ]
+  }

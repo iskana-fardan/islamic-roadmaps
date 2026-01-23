@@ -1,0 +1,19 @@
+ {
+    "id": "sharh-al-tasrif-al-izzi",
+    "title": "Sharh Al-Tasrif Al-'Izzi",
+    "titleArabic": "شرح التصريف العزي",
+    "author": "Ulama Sorof",
+    "type": "dars",
+    "field": "sharaf",
+    "level": "menengah",
+    "description": "Penjelasan detail atas kaidah-kaidah dalam Tasrif Al-'Izzi.",
+    "recommendedUsage": "Pendalaman kaidah dan latihan analisis tashrif",
+    "resources": [],
+    "recommendedEditions": [
+      {
+        "publisher": "Dar Al-Kutub Al-'Ilmiyyah",
+        "note": "Digunakan untuk pendalaman dan latihan",
+        "label": "recommended"
+      }
+    ]
+  }

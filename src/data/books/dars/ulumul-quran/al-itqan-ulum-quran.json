@@ -1,0 +1,24 @@
+ {
+    "id": "al-itqan-ulum-quran",
+    "title": "Al-Itqan fi Ulum Al-Qur'an",
+    "titleArabic": "الإتقان في علوم القرآن",
+    "author": "Jalaluddin As-Suyuti",
+    "type": "dars",
+    "field": "ulumul-quran",
+    "description": "Ensiklopedia klasik Ulum Al-Qur'an yang sangat luas dan komprehensif.",
+    "recommendedUsage": "Rujukan utama untuk level lanjutan Ulum Al-Qur'an",
+    "resources": [
+      {
+        "label": "PDF",
+        "type": "pdf",
+        "url": "https://example.com/al-itqan.pdf"
+      }
+    ],
+    "recommendedEditions": [
+      {
+        "publisher": "Dar At-Turath",
+        "note": "Rujukan klasik utama Ulum Al-Qur'an",
+        "label": "recommended"
+      }
+    ]
+  }

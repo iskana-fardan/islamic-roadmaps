@@ -1,0 +1,24 @@
+{
+    "id": "lubab-an-nuqul",
+    "title": "Lubab An-Nuqul fi Asbab An-Nuzul",
+    "titleArabic": "لباب النقول في أسباب النزول",
+    "author": "Jalaluddin As-Suyuti",
+    "type": "muthalaah",
+    "field": "ulumul-quran",
+    "description": "Kitab ringkas tentang sebab-sebab turunnya ayat Al-Qur'an.",
+    "recommendedUsage": "Referensi muthalaah dalam bab Asbab An-Nuzul",
+    "resources": [
+      {
+        "label": "PDF",
+        "type": "pdf",
+        "url": "https://example.com/lubab-an-nuqul.pdf"
+      }
+    ],
+    "recommendedEditions": [
+      {
+        "publisher": "Dar At-Turath",
+        "note": "Referensi klasik Asbab An-Nuzul",
+        "label": "recommended"
+      }
+    ]
+  }

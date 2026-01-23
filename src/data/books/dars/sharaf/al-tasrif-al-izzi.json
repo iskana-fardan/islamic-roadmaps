@@ -1,0 +1,19 @@
+ {
+    "id": "al-tasrif-al-izzi",
+    "title": "Al-Tasrif Al-'Izzi",
+    "titleArabic": "التصريف العزي",
+    "author": "Izzuddin Al-Zanjani",
+    "type": "dars",
+    "field": "sharaf",
+    "level": "menengah",
+    "description": "Kitab sharaf menengah yang sangat populer di dunia pesantren.",
+    "recommendedUsage": "Rujukan utama sharaf sebelum tingkat lanjutan",
+    "resources": [],
+    "recommendedEditions": [
+      {
+        "publisher": "Dar Al-Minhaj",
+        "note": "Rujukan utama sebelum sharaf lanjutan",
+        "label": "primary"
+      }
+    ]
+  }

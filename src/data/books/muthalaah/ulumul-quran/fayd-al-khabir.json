@@ -1,0 +1,24 @@
+ {
+    "id": "fayd-al-khabir",
+    "title": "Fayd Al-Khabir wa Khulasah At-Taqrir",
+    "titleArabic": "فيض الخبير وخلاصة التقرير",
+    "author": "Yasin Al-Fadani",
+    "type": "muthalaah",
+    "field": "ulumul-quran",
+    "description": "Ringkasan dan catatan penting dalam kajian Ulum Al-Qur'an.",
+    "recommendedUsage": "Dibaca sebagai kitab pendamping dan penguatan",
+    "resources": [
+      {
+        "label": "PDF",
+        "type": "pdf",
+        "url": "https://example.com/fayd-al-khabir.pdf"
+      }
+    ],
+    "recommendedEditions": [
+      {
+        "publisher": "Dar As-Salih",
+        "note": "Cocok sebagai kitab pendamping Ulum Al-Qur'an",
+        "label": "recommended"
+      }
+    ]
+  }

@@ -1,11 +1,13 @@
-import ajurrumiyyah from "./ajurrumiyyah.json"
-import qawaidNahwiyyah from "./qawaid-nahwiyyah.json"
+import ajurrumiyyah from "./dars/nahwu/ajurrumiyyah.json"
+import alkhasais from "./muthalaah/nahwu/al-khasais.json"
+
 import type { Book } from "../../types/book";
 
 
 export const books = [
     ajurrumiyyah,
-    qawaidNahwiyyah
+    alkhasais
+
 ] as Book[];
 
 export const getBookById = (id?: string) =>

@@ -1,0 +1,18 @@
+{
+    "id": "lisan-al-arab",
+    "title": "Lisan Al-Arab",
+    "titleArabic": "لسان العرب",
+    "author": "Ibn Manzur",
+    "type": "muthalaah",
+    "field": "nahwu",
+    "description": "Kamus besar bahasa Arab yang sering dijadikan rujukan utama dalam nahwu dan lughah.",
+    "recommendedUsage": "Rujukan kosakata, makna, dan penggunaan bahasa",
+    "resources": [],
+    "recommendedEditions": [
+      {
+        "publisher": "Dar Sader",
+        "note": "Rujukan utama kosakata dan struktur bahasa Arab",
+        "label": "recommended"
+      }
+    ]
+  }

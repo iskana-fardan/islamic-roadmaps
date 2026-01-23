@@ -1,0 +1,19 @@
+{
+    "id": "sharh-al-bina-wa-al-asas",
+    "title": "Sharh Al-Bina wa Al-Asas",
+    "titleArabic": "شرح البناء والأساس",
+    "author": "Ulama Sorof",
+    "type": "dars",
+    "field": "sharaf",
+    "level": "menengah",
+    "description": "Syarah yang menjelaskan kaidah-kaidah dalam matan Al-Bina secara sistematis.",
+    "recommendedUsage": "Memahami praktik tashrif secara bertahap",
+    "resources": [],
+    "recommendedEditions": [
+      {
+        "publisher": "Dar Al-Fikr",
+        "note": "Membantu memahami praktik tashrif",
+        "label": "recommended"
+      }
+    ]
+  } 

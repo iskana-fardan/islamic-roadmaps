@@ -1,0 +1,24 @@
+ {
+    "id": "al-burhan-ulum-quran",
+    "title": "Al-Burhan fi Ulum Al-Qur'an",
+    "titleArabic": "البرهان في علوم القرآن",
+    "author": "Badruddin Az-Zarkashi",
+    "type": "dars",
+    "field": "ulumul-quran",
+    "description": "Kitab fundamental Ulum Al-Qur'an dengan pendekatan usuli dan sistematis.",
+    "recommendedUsage": "Dipahami sebelum atau bersamaan dengan Al-Itqan",
+    "resources": [
+      {
+        "label": "PDF",
+        "type": "pdf",
+        "url": "https://example.com/al-burhan.pdf"
+      }
+    ],
+    "recommendedEditions": [
+      {
+        "publisher": "Dar As-Salam",
+        "note": "Sangat baik untuk memahami fondasi Ulum Al-Qur'an",
+        "label": "recommended"
+      }
+    ]
+  }

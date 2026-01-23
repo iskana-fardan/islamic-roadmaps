@@ -1,0 +1,18 @@
+  {
+    "id": "tafsir-irab-ibn-aqil",
+    "title": "Tafsir I'rab Ibn Aqil",
+    "titleArabic": "تفسير إعراب ابن عقيل",
+    "author": "Abdullah bin Abdurrahman Al-Azhari",
+    "type": "muthalaah",
+    "field": "nahwu",
+    "description": "Penjelasan dan analisis i‘rab yang rinci berdasarkan syarah Ibn Aqil.",
+    "recommendedUsage": "Referensi i‘rab tingkat lanjut setelah mempelajari Alfiyyah",
+    "resources": [],
+    "recommendedEditions": [
+      {
+        "publisher": "Al-Azhar Press",
+        "note": "Digunakan sebagai referensi i‘rab tingkat lanjut",
+        "label": "recommended"
+      }
+    ]
+  }

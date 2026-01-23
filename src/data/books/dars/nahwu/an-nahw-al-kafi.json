@@ -1,0 +1,20 @@
+{
+    "id": "an-nahw-al-kafi",
+    "title": "Al-Nahw Al-Kafi",
+    "titleArabic": "النحو الكافي",
+    "author": "Abbas Hasan",
+    "type": "dars",
+    "field": "nahwu",
+    "description": "Kitab nahwu sistematis dengan bahasa yang relatif modern.",
+    "recommendedUsage": "Transisi dari nahwu dasar ke menengah",
+    "resources": [
+      { "label": "PDF", "type": "pdf", "url": "https://example.com/nahw-kafi.pdf" }
+    ],
+    "recommendedEditions": [
+      {
+        "publisher": "Dar Al-Ma'arif",
+        "note": "Pendekatan tematik dan sistematis",
+        "label": "recommended"
+      }
+    ]
+  }

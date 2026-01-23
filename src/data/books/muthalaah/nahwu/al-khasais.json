@@ -1,0 +1,18 @@
+ {
+    "id": "al-khasais",
+    "title": "Al-Khasa'is",
+    "titleArabic": "الخصائص",
+    "author": "Ibn Jinni",
+    "type": "muthalaah",
+    "field": "nahwu",
+    "description": "Kitab linguistik Arab klasik yang membahas struktur, kaidah, dan karakter bahasa Arab secara mendalam.",
+    "recommendedUsage": "Referensi utama dalam linguistik Arab dan ushul nahwu",
+    "resources": [],
+    "recommendedEditions": [
+      {
+        "publisher": "Al-Maktabah Al-'Ilmiyyah",
+        "note": "Referensi utama kajian linguistik Arab",
+        "label": "recommended"
+      }
+    ]
+  }

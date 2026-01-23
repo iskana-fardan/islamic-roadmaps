@@ -1,0 +1,29 @@
+ {
+    "id": "mabahith-ulum-quran",
+    "title": "Mabahith fi Ulum Al-Qur'an",
+    "titleArabic": "مباحث في علوم القرآن",
+    "author": "Manna' Al-Qattan",
+    "type": "dars",
+    "field": "ulumul-quran",
+    "description": "Kitab pengantar Ulum Al-Qur'an yang sistematis dan sangat populer di dunia akademik.",
+    "recommendedUsage": "Cocok sebagai pengantar Ulum Al-Qur'an di level menengah",
+    "resources": [
+      {
+        "label": "PDF",
+        "type": "pdf",
+        "url": "https://example.com/mabahith-ulum-quran.pdf"
+      },
+      {
+        "label": "Sharh Audio",
+        "type": "audio",
+        "url": "https://example.com/audio-mabahith"
+      }
+    ],
+    "recommendedEditions": [
+      {
+        "publisher": "Dar Al-Ma'arif",
+        "note": "Cetakan standar yang banyak dipakai di universitas",
+        "label": "recommended"
+      }
+    ]
+  }

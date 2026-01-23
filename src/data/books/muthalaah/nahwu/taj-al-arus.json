@@ -1,0 +1,18 @@
+ {
+    "id": "taj-al-arus",
+    "title": "Taj Al-'Arus",
+    "titleArabic": "تاج العروس",
+    "author": "Murtada Al-Zabidi",
+    "type": "muthalaah",
+    "field": "nahwu",
+    "description": "Ensiklopedia bahasa Arab yang melengkapi, mengkritisi, dan memperluas Lisan Al-Arab.",
+    "recommendedUsage": "Referensi tingkat tinggi untuk peneliti dan akademisi bahasa Arab",
+    "resources": [],
+    "recommendedEditions": [
+      {
+        "publisher": "Dar Al-Hidayah",
+        "note": "Referensi tingkat lanjut untuk penelitian bahasa",
+        "label": "recommended"
+      }
+    ]
+  }

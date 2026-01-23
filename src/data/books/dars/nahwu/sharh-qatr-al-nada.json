@@ -1,0 +1,20 @@
+ {
+    "id": "sharh-qatr-al-nada",
+    "title": "Sharh Qatr Al-Nada wa Ball Al-Sada",
+    "titleArabic": "شرح قطر الندى وبل الصدى",
+    "author": "Abdullah bin Yusuf Ibn Hisham",
+    "type": "dars",
+    "field": "nahwu",
+    "description": "Kitab nahwu menengah dengan analisis kaidah yang lebih mendalam.",
+    "recommendedUsage": "Nahwu menengah setelah Ajurrumiyyah",
+    "resources": [
+      { "label": "PDF", "type": "pdf", "url": "https://example.com/qatr-nada.pdf" }
+    ],
+    "recommendedEditions": [
+      {
+        "publisher": "Dar Al-Fikr",
+        "note": "Banyak dipakai di Ma'had dan universitas",
+        "label": "recommended"
+      }
+    ]
+  }
