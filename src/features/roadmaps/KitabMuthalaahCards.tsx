@@ -52,7 +52,10 @@ const KitabMuthalaahCard = ({books}:Props) => {
 
                               <IconButton 
                                   disableRipple
-                                  onClick={() => setCompleted(!completed)}
+                                  onClick={(e) => {
+                                    e.stopPropagation()
+                                    setCompleted(!completed)
+                                  }}
                               >
                                 { completed 
                                       ? <BookmarkOutlinedIcon sx={{ color:theme.palette.teal[100]}} />  
