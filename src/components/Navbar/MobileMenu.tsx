@@ -1,6 +1,6 @@
 import { Box, Button, Drawer, IconButton, Typography, useTheme } from "@mui/material"
 import CloseIcon from '@mui/icons-material/Close';
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { LightModeOutlined, DarkModeOutlined } from "@mui/icons-material";
 import { useColorMode } from "../../theme/useColorMode";
 import { useNavItems } from "./useNavItems";
@@ -14,7 +14,26 @@ const MobileMenu = ({ open, onClose }:Props) => {
   const theme = useTheme();
   const navItems = useNavItems();
   const location = useLocation();
+   const navigate = useNavigate();
   const {toggleColorMode} = useColorMode();
+
+
+  const handleAnchorClick = (anchorId: string) => {
+    const scrollToAnchor = () => {
+      const el = document.getElementById(anchorId)
+      if(el){
+        el.scrollIntoView({ behavior: "smooth" })
+      }
+    }
+
+    
+    if (location.pathname !== "/"){
+      navigate("/")
+      setTimeout(scrollToAnchor,150)
+    }else {
+      scrollToAnchor()
+    }
+  }
 
   
   return (
@@ -66,15 +85,53 @@ const MobileMenu = ({ open, onClose }:Props) => {
             {/* Links */}
             <Box px={1} sx={{ display: "flex", gap: 0.5,flexDirection: "column", marginTop: 2, px:2}}>
                 {navItems.map((item) => {
-                    const isActive = location.pathname === item.path
+                    const isActive = item.type === "route" && location.pathname === item.path
 
-                    return (
+                     // ROUTE ITEM
+                    if (item.type === "route") {
+                        return (
+                            <Button
+                                disableRipple
+                                key={item.label}
+                                component={NavLink}
+                                to={item.path}
+                                onClick={onClose}
+                                sx={{
+                                        justifyContent: "flex-start",
+                                        textTransform: "none",
+                                        borderRadius: "5px",
+                                        fontSize: "14px",
+                                        fontWeight: 600,
+                                        color: "text.primary",
+                                        px: 2,
+                                        py: 0.8,
+
+                                        // hover
+                                        "&:hover": {
+                                            backgroundColor: "rgba(100,100,100,0.1)",
+                                            color:"text.primary"
+                                        },
+
+                                        // selected / active
+                                        backgroundColor: isActive
+                                            ? "rgba(90, 130, 126, 0.2)"
+                                            : "transparent",
+                                    }}
+                            >
+                                {item.label}
+                            </Button>
+                        )
+                    }
+
+                    // ANCHOR ITEM
+                     return (
                         <Button
                             disableRipple
-                            key={item.path}
-                            component={NavLink}
-                            to={item.path}
-                            onClick={onClose}
+                            key={item.label}
+                            onClick={() => {
+                                onClose()
+                                handleAnchorClick(item.anchor)
+                            }}
                             sx={{
                                 justifyContent: "flex-start",
                                 textTransform: "none",
