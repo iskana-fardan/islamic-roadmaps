@@ -13,12 +13,17 @@ export interface Collaborator {
 
 export const collaborators: Collaborator[] = [
   {
-    id: "ipmkrmesir",
-    name: "IPMKR Mesir",
-    role: "Kolaborator Utama",
+    id: "ahmad-fauzi",
+    name: "Ahmad Fauzi",
+    role: "Penulis Konten & Reviewer",
     description:
-      "Inisiator dan mitra utama dalam pengembangan platform pembelajaran keislaman ini.",
-    avatar: "/avatars/avatar-1.webp",
+      "Fokus pada fiqih dasar dan penulisan konten materi keislaman.",
+    avatar: "/avatars/avatar-1.svg",
+    socials: {
+      github: "https://github.com/",
+      website: "https://ahmadwibowo.com",
+    },
+
   },
   {
     id: "ahmad-widobwo",
@@ -27,6 +32,9 @@ export const collaborators: Collaborator[] = [
     description:
       "Bertanggung jawab atas desain antarmuka yang bersih dan ramah pengguna.",
     avatar: "/avatars/avatar-2.svg",
+    socials: {
+      instagram: "https://instagram.com/",
+    },
   },
   {
     id: "budi-santoso",
@@ -35,6 +43,10 @@ export const collaborators: Collaborator[] = [
     description:
       "Mengembangkan arsitektur teknis dan fungsionalitas platform.",
     avatar: "/avatars/avatar-3.svg",
+    socials: {
+      github: "https://github.com/",
+      website: "https://ahmadwibowo.com",
+    },
   },
   {
     id: "luthfi-hakim",
@@ -43,5 +55,8 @@ export const collaborators: Collaborator[] = [
     description:
       "Melakukan review mendalam terhadap akurasi materi roadmap hadits.",
     avatar: "/avatars/avatar-4.svg",
+     socials: {
+      instagram: "https://instagram.com/",
+    },
   },
 ]

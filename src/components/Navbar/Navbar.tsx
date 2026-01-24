@@ -36,7 +36,7 @@ const Navbar = () => {
         >
             <Toolbar 
                 disableGutters // disableGutters: Remove right and left padding
-                sx={{minHeight : { xs : 52,md: 62}}}
+                sx={{minHeight : { xs : 58,md: 65}}}
             > 
                 <Container maxWidth="lg">
                     <Box 
