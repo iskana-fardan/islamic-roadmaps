@@ -12,9 +12,8 @@
         "order": 1,
         "dars": [
             {
-            "id": "ajurrumiyyah",
-            "bookId": "ajurrumiyyah",
-            "affectsProgress": true
+            "id": "al-waroqat",
+            "bookId": "al-waroqat"
             }
         ]
         },
@@ -22,19 +21,29 @@
         "id": "intermediate",
         "label": "Intermediate",
         "order": 2,
-        "dars": []
+        "dars": [
+            {
+            "id": "jamul-jawamik",
+            "bookId": "jamul-jawamik"
+            }
+        ]
         },
         {
         "id": "advanced",
         "label": "Advanced",
         "order": 3,
-        "dars": []
+        "dars": [
+            {
+            "id": "nihayatus-sul",
+            "bookId": "nihayatus-sul"
+            }
+        ]
         }
     ],
     "muthalaah": [
         {
-        "id": "al-khasais",
-        "bookId": "al-khasais",
+        "id": "al-mustashfa",
+        "bookId": "al-mustashfa",
         "label": "Pengayaan"
         }
     ]

@@ -12,9 +12,8 @@
       "order": 1,
       "dars": [
         {
-          "id": "ajurrumiyyah",
-          "bookId": "ajurrumiyyah",
-          "affectsProgress": true
+          "id": "tuhfah-saniyyah",
+          "bookId": "tuhfah-saniyyah"
         }
       ]
     },
@@ -22,20 +21,26 @@
       "id": "intermediate",
       "label": "Intermediate",
       "order": 2,
-      "dars": []
+      "dars": [
+        {
+          "id": "qatrun-nada-wa-ballas-shoda",
+          "bookId": "qatrun-nada-wa-ballas-shoda"
+        }
+      ]
     },
     {
       "id": "advanced",
       "label": "Advanced",
       "order": 3,
-      "dars": []
+      "dars": [
+        {
+          "id": "syarah-makudi-alal-alfiyyah-ibn-malik",
+          "bookId": "syarah-makudi-alal-alfiyyah-ibn-malik"
+        }
+      ]
     }
   ],
   "muthalaah": [
-    {
-      "id": "al-khasais",
-      "bookId": "al-khasais",
-      "label": "Pengayaan"
-    }
+    
   ]
 }

@@ -12,9 +12,8 @@
         "order": 1,
         "dars": [
             {
-            "id": "ajurrumiyyah",
-            "bookId": "ajurrumiyyah",
-            "affectsProgress": true
+            "id": "nuzhatun-nadzar",
+            "bookId": "nuzhatun-nadzar"
             }
         ]
         },
@@ -22,19 +21,29 @@
         "id": "intermediate",
         "label": "Intermediate",
         "order": 2,
-        "dars": []
+        "dars": [
+            {
+                "id": "tadrib-ar-rowi",
+                "bookId": "tadrib-ar-rowi"
+            }
+        ]
         },
         {
         "id": "advanced",
         "label": "Advanced",
         "order": 3,
-        "dars": []
+        "dars": [
+             {
+                "id": "muqoddimah-ibnu-sholah",
+                "bookId": "muqoddimah-ibnu-sholah"
+            }
+        ]
         }
     ],
     "muthalaah": [
         {
-        "id": "al-khasais",
-        "bookId": "al-khasais",
+        "id": "taysir-mustholahul-hadist",
+        "bookId": "taysir-mustholahul-hadist",
         "label": "Pengayaan"
         }
     ]
