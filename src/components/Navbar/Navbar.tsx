@@ -6,7 +6,11 @@ import NavbarLinks from "./NavbarLinks";
 import ColorModeSwitch from "../ColorModeSwitch";
 import MobileMenu from "./MobileMenu";
 
-const Navbar = () => {
+type NavbarProps = {
+    offsetTop? : number
+}
+
+const Navbar = ({offsetTop = 0}:NavbarProps) => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled,setScrolled]  =  useState(false);
   const theme = useTheme();
@@ -27,6 +31,7 @@ const Navbar = () => {
             position="fixed"
             elevation={0} // remove default shadow
             sx={{
+                top:offsetTop,
                 backgroundColor: scrolled ? theme.palette.glassBackground : "transparent",
                 backdropFilter: scrolled ? "blur(12px)" : "none",
                 borderBottom: `1px solid ${theme.palette.divider}`,
