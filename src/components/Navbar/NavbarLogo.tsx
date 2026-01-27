@@ -11,7 +11,7 @@ const NavbarLogo = () => {
             display={{xs : 'none',sm : 'inline-flex'}}
             color="text.primary"
         >
-            Islamic Roadmaps
+            Peta Ilmu Islam
         </Typography>
     </Box>
   )

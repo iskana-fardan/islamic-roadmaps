@@ -17,7 +17,7 @@ const FieldList= () =>{
   return (
     <Box
       component="section"
-      id="categories"
+      id="bidang-ilmu"
       sx={{
         py: { xs: 6,sm: 7, md: 9,lg : 11 },
         backgroundColor: theme.palette.background.paper

@@ -1,10 +1,10 @@
 
 export const useNavItems = () => {
     return [
-        { label: "Home", path: "/", type: "route" },
-        { label: "Categories", anchor: "categories", type: "anchor" },
-        { label: "Collaborators", path: "/collaborators", type: "route" },
-        { label: "About", path: "/about", type: "route" },
+        { label: "Beranda", path: "/", type: "route" },
+        { label: "Bidang Ilmu", anchor: "bidang-ilmu", type: "anchor" },
+        { label: "Kolaborasi", path: "/kolaborasi", type: "route" },
+        { label: "Tentang", path: "/tentang", type: "route" },
     ] as const
 }
 

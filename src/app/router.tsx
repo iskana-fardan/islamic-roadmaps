@@ -14,7 +14,7 @@ export const router = createBrowserRouter([
                 element: <HomePage />
             },
             {
-                path: "/about",
+                path: "/tentang",
                 element: <AboutPage />
             },
             {
@@ -23,7 +23,7 @@ export const router = createBrowserRouter([
                                         // ebagai parameter bernama slug
             },
             {
-                path: "/collaborators",
+                path: "/kolaborasi",
                 element: <CollaboratorsPage/>
             }
             // {
