@@ -6,19 +6,19 @@ const approaches = [
   {
     title: "Kitab Pelajaran",
     description:
-      "Structured study books meant to be learned sequentially with a teacher, building from fundamentals to advanced.",
+      "Kitab-kitab utama yang dipelajari secara bertahap bersama guru,disusun dari tingkat dasar hingga lanjutan sesuai tradisi keilmuan.",
     icon: LuBookOpen,
   },
   {
     title: "Kitab Muthala'ah",
     description:
-      "Enrichment reading for insight and breadth. Can be explored non-linearly based on interest and need.",
+      "Bacaan pengayaan untuk memperluas wawasan dan pendalaman ilmu,dapat dibaca secara fleksibel sesuai kebutuhan dan minat.",
     icon: LuLayers,
   },
   {
-    title: "Curated Guidance",
+    title: "Panduan Kurasi Kitab",
     description:
-      "Carefully selected books and recommended editions based on traditional Islamic scholarship methodology.",
+      "Rekomendasi kitab dan cetakan yang diseleksi dengan cermat,berdasarkan metodologi ulama dan tradisi keilmuan Islam.",
     icon: LuShieldCheck,
   },
 ]
