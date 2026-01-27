@@ -6,7 +6,7 @@ const ContactAndResources = () => {
     <Grid size={{ xs: 12, md: 4 }}>
         <Stack spacing={2}>
            <Typography fontWeight={600}>
-                Contact & Resources
+                Kontak & Sumber
             </Typography>
 
 
@@ -19,7 +19,7 @@ const ContactAndResources = () => {
                     underline="hover"
                     sx={{ color: "text.secondary" }}
                   >
-                    View on GitHub
+                    Lihat di Github
                   </Link>
                 </Stack>
 
@@ -31,7 +31,7 @@ const ContactAndResources = () => {
                     underline="hover"
                     sx={{ color: "text.secondary" }}
                   >
-                    Get in Touch
+                    Hubungi Kami
                   </Link>
                 </Stack>
               </Stack>
@@ -40,7 +40,7 @@ const ContactAndResources = () => {
                 variant="caption"
                 sx={{ color: "text.secondary", mt: 2 }}
             >
-                Built with care for students of knowledge worldwide.
+                Dibangun dengan kepedulian untuk para penuntut ilmu
             </Typography>
         </Stack>
     </Grid>

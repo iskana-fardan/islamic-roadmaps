@@ -14,7 +14,7 @@ const FooterBrand = () => {
                         fontWeight={'600'}
                         color="text.primary"
                     >
-                        Islamic Roadmaps
+                        Peta Ilmu Islam
                     </Typography>
                 </Box>
             </Stack>
@@ -24,7 +24,9 @@ const FooterBrand = () => {
                 variant="body2"
                 sx={{ color: "text.secondary" }}
               >
-                A structured guide to Islamic learning, featuring curated book recommendations and study paths for students of sacred knowledge. Designed to help you navigate the classical curriculum with clarity and purpose.
+                Panduan terstruktur untuk memetakan jalur belajar kitab
+                dan disiplin ilmu Islam berdasarkan tradisi keilmuan ulama.
+                Dirancang untuk membantu penuntut ilmu belajar dengan arah dan kejelasan.
               </Typography>
         </Stack>
     </Grid>

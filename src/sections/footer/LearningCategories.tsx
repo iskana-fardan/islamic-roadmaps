@@ -2,13 +2,13 @@ import Grid from "@mui/material/Grid"
 import { Stack, Typography } from "@mui/material"
 
 const categories = [
-  "Fiqh",
+  "Fikih",
+  "Ushul Fikih",
   "Nahwu",
+  "Sharaf",
   "Balaghah",
   "Aqidah",
-  "Usul Fiqh",
-  "Sorof",
-  "Hadith & Musthalah",
+  "Hadis & Musthalah",
   "Tafsir",
 ]
 
@@ -22,7 +22,7 @@ const LearningCategories = () => {
     <Grid size={{ xs: 12, md: 4 }}>
       <Stack spacing={2}>
         <Typography fontWeight={600}>
-          Learning Categories
+          Bidang Ilmu
         </Typography>
 
         {/* Grid container */}

@@ -11,7 +11,7 @@ const Bottom = () => {
           align="center"
           sx={{ color: "text.secondary",pt: {xs: 3.2, md:3.5 }, pb: {xs: 2 , md:3.5 } }}
         >
-          Islamic Learning Roadmaps – A Guide to Sacred Knowledge
+          © Peta Ilmu Islam — Menata Ilmu, Menjaga Tradisi
         </Typography>
    </Grid>
   )
