@@ -174,14 +174,13 @@ const HeroSection = () => {
               "10+ Bidang Ilmu",
               "Kitab Bertahap",
               "Kurasi Tradisi Ulama"
-            ].map((item, index) => (
+            ].map((item) => (
               <Grid
                 key={item}
                 size={{ xs:6,sm:"auto" }}
                 sx={{
                   display: "flex",
-                  justifyContent:
-                    index === 2 ? "center" : "flex-start",
+                  justifyContent:"center",
                 }}
               >
                 <Stack
