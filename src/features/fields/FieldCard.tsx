@@ -104,7 +104,7 @@ const FieldCard = ({name,slug, nameArabic, description, icon }:Props) => {
                                   
                               >
                                   <Typography variant="caption" mr={0.5}>
-                                  View Roadmap
+                                  Lihat alur belajar
                                   </Typography>
                                   <ArrowForwardIcon sx={{ "&:hover": { transform: "translateX(2px)" } }} fontSize="inherit"/>
                               </IconButton>
