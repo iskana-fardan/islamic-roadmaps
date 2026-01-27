@@ -64,7 +64,7 @@ const HeroSection = () => {
                 color: "text.primary",
               }}
             >
-              Islamic Learning Roadmaps
+              Peta Ilmu Islam
             </Typography>
 
             <Typography
@@ -83,8 +83,8 @@ const HeroSection = () => {
                 color: "text.secondary",
               }}
             >
-              Structured study paths and classical reading recommendations
-              for Islamic sciences
+              Panduan jalur belajar kitab dan disiplin ilmu Islam
+              berbasis tradisi keilmuan ulama.
             </Typography>
           </Stack>
 
@@ -128,7 +128,7 @@ const HeroSection = () => {
                 },
               }}
             >
-              Explore Learning Paths
+              Lihat Roadmap Ilmu
             </Button>
 
             <Button
@@ -152,7 +152,7 @@ const HeroSection = () => {
                 },
               }}
             >
-              Learn More
+              Tentang Kami
             </Button>
           </Stack>
 
@@ -171,9 +171,9 @@ const HeroSection = () => {
             }}
           >
             {[
-              "10 Islamic Sciences",
-              "Curated Book Lists",
-              "Structured Paths",
+              "10+ Bidang Ilmu",
+              "Kitab Bertahap",
+              "Kurasi Tradisi Ulama"
             ].map((item, index) => (
               <Grid
                 key={item}
