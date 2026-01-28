@@ -52,18 +52,18 @@ export default function CollaboratorsSection() {
           >
             Para Kontributor
           </Typography>
-          <Typography color="text.secondary" maxWidth={720} mx="auto">
+          <Typography color="text.secondary">
             Proyek ini dikembangkan bersama para penuntut ilmu dan kontributor
             yang peduli terhadap keberlangsungan tradisi keilmuan Islam.
           </Typography>
 
-          <Typography color="text.secondary" maxWidth={720} mx="auto">
+          <Typography color="text.secondary">
             Setiap kontribusi yang diberikan—baik dalam bentuk penulisan, peninjauan,
             maupun pengembangan teknis—merupakan bagian dari ikhtiar kolektif
             untuk menghadirkan peta belajar yang lebih terarah dan bermanfaat.
           </Typography>
 
-          <Typography color="text.secondary" maxWidth={720} mx="auto">
+          <Typography color="text.secondary">
             Ini adalah inisiatif independen yang dibangun atas semangat berbagi ilmu
             dan saling menasihati dalam kebaikan.
           </Typography>
