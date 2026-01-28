@@ -15,7 +15,7 @@ const HeroSection = () => {
 
   const scrollToCategories = () => {
     document
-      .getElementById("categories")
+      .getElementById("bidang-ilmu")
       ?.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -134,7 +134,7 @@ const HeroSection = () => {
             <Button
               disableRipple
               component={NavLink}
-              to="/about"
+              to="/tentang"
               variant="outlined"
               size="medium"
               sx={{
