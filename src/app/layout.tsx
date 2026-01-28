@@ -4,6 +4,7 @@ import FooterSection from "../sections/footer/FooterSection"
 import { Outlet } from "react-router-dom"
 import DevNotice from "../components/DevNotice"
 import { useState } from "react"
+import ScrollToTop from "../components/ScrollToTop"
 
 const RootLayout = () => {
     const [noticeHeight, setNoticeHeight] = useState(0);
@@ -11,7 +12,7 @@ const RootLayout = () => {
         <Box>
             <DevNotice onHeightChange={setNoticeHeight} />
 
-
+            <ScrollToTop/>
             <Navbar offsetTop={noticeHeight}/>
 
             {/* Konten page */}
