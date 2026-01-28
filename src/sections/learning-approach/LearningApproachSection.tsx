@@ -4,7 +4,7 @@ import { LuBookOpen, LuLayers, LuShieldCheck } from "react-icons/lu"
 
 const approaches = [
   {
-    title: "Kitab Pelajaran",
+    title: "Kitab Dars",
     description:
       "Kitab-kitab utama yang dipelajari secara bertahap bersama guru,disusun dari tingkat dasar hingga lanjutan sesuai tradisi keilmuan.",
     icon: LuBookOpen,
