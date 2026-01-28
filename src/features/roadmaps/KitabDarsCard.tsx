@@ -14,13 +14,21 @@ import { useState } from "react"
 
 interface Props  {
   books: (Book | undefined)[]
-  completed: boolean
-  onToggle: () => void
 }
 
-const KitabDarsCard = ({books, completed, onToggle}: Props) => {
+
+          // completed={completed === 1}
+
+
+const KitabDarsCard = ({books}: Props) => {
   const [ open, setOpen ] = useState(false);
+  const [completed, setCompleted] = useState(0)
   const theme =  useTheme();
+
+  const onToggle = () => {
+            setCompleted((prev) => (prev === 1 ? 0 : 1))
+          }
+        
   return (
     <>
       {books.length === 0 && '-'}
@@ -59,7 +67,7 @@ const KitabDarsCard = ({books, completed, onToggle}: Props) => {
             {/* Checkbox */}
             <Checkbox
               disableRipple
-              checked={completed}
+              checked={completed === 1}
               onClick={(e) => {
                 e.stopPropagation()
                 onToggle()

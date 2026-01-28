@@ -22,7 +22,7 @@ interface Props {
 
 const RoadmapLevel = ({books,  title , color }: Props) => {
   const [expanded, setExpanded] = useState(false)
-  const [completed, setCompleted] = useState(0)
+
 
   return (
     <Accordion
@@ -57,7 +57,7 @@ const RoadmapLevel = ({books,  title , color }: Props) => {
           <Box>
             <Typography fontWeight={600}>{title}</Typography>
             <Typography variant="body2" color="text.secondary">
-              {completed} of {books.length} completed
+              Jumlah kitab : {books.length}
             </Typography>
           </Box>
         </Stack>
@@ -81,10 +81,6 @@ const RoadmapLevel = ({books,  title , color }: Props) => {
       >
         <KitabDarsCard
           books={books}
-          completed={completed === 1}
-          onToggle={() =>
-            setCompleted((prev) => (prev === 1 ? 0 : 1))
-          }
         />
       </AccordionDetails>
     </Accordion>
