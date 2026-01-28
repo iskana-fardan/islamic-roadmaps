@@ -82,7 +82,7 @@ const RoadmapDetailPage = () => {
           >
             <ArrowBackRoundedIcon fontSize="small" />
             <Typography ml={1} fontSize="0.8rem">
-              Back to Categories
+              Kembali ke beranda
             </Typography>
           </IconButton>
 
@@ -123,19 +123,6 @@ const RoadmapDetailPage = () => {
                 }}
               >
                 {roadmap.title}{" "}
-                <Typography
-                  component="span"
-                  sx={{
-                    fontSize: {
-                      xs: "1rem",
-                      sm: "1.15rem",
-                    },
-                    color: "text.secondary",
-                    fontWeight: 500,
-                  }}
-                >
-                  {roadmap.titleArabic}
-                </Typography>
               </Typography>
 
               <Typography
@@ -143,7 +130,7 @@ const RoadmapDetailPage = () => {
                 color="text.secondary"
                 mt={0.3}
               >
-                Learning Roadmap
+                {roadmap.titleArabic}
               </Typography>
             </Box>
           </Stack>
@@ -153,7 +140,8 @@ const RoadmapDetailPage = () => {
             color="text.secondary"
             sx={{ lineHeight: 1.6 }}
           >
-            {roadmap.description}
+            {`Jalur belajar ${roadmap.title} dari tingkat dasar hingga lanjutan
+berdasarkan tradisi keilmuan ulama.`}
           </Typography>
         </Stack>
       </Container>
@@ -184,11 +172,11 @@ const RoadmapDetailPage = () => {
                 <Typography component="span" fontWeight={600}>
                   Kitab Dars{" "}
                 </Typography>
-                dipelajari bertahap bersama guru, sedangkan{" "}
+                dipelajari secara bertahap bersama guru sebagai jalur utama pembelajaran.
                 <Typography component="span" fontWeight={600}>
                   Kitab Muthala'ah{" "}
                 </Typography>
-                digunakan sebagai bacaan pengayaan.
+                digunakan sebagai bacaan pengayaan dan pendalaman materi.
               </Typography>
             </Box>
           </Stack>
@@ -201,10 +189,10 @@ const RoadmapDetailPage = () => {
           <MenuBookOutlinedIcon sx={{ color: theme.palette.teal[100] }} />
           <Stack>
             <Typography variant="h6" fontWeight={700}>
-              Kitab Pelajaran
+              Kitab Dars
             </Typography>
             <Typography color="text.secondary">
-              Jalur Belajar – Dipelajari bersama guru
+              Jalur belajar utama — dipelajari secara bertahap bersama guru
             </Typography>
           </Stack>
         </Stack>
@@ -212,17 +200,17 @@ const RoadmapDetailPage = () => {
         <Stack spacing={1}>
           <RoadmapLevel
             books={beginnerBooks}
-            title="Dasar (Beginner)"
+            title="Tingkat Dasar"
             color={theme.palette.level.beginner}
           />
           <RoadmapLevel
             books={intermediateBooks}
-            title="Menengah (Intermediate)"
+            title="Tingkat Menengah"
             color={theme.palette.level.intermediate}
           />
           <RoadmapLevel
             books={advancedBooks}
-            title="Lanjutan (Advanced)"
+            title="Tingkat Lanjutan"
             color={theme.palette.level.advanced}
           />
         </Stack>
@@ -237,7 +225,7 @@ const RoadmapDetailPage = () => {
               Kitab Muthala'ah
             </Typography>
             <Typography color="text.secondary">
-              Bacaan & Pendalaman
+              Bacaan pengayaan dan pendalaman di luar jalur pelajaran utama
             </Typography>
           </Stack>
         </Stack>
