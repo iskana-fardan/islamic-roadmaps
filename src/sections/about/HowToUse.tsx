@@ -10,23 +10,23 @@ interface Step {
 const steps: Step[] = [
     {
         id: 1,
-        title: "Choose Your Field",
-        description: "Browse the categories and select an Islamic science you wish to study, such as Fiqh, Nahwu, or Hadith."
+        title: "Pilih Bidang Ilmu",
+        description: "Mulailah dengan memilih disiplin ilmu yang ingin dipelajari, seperti fikih, nahwu, tafsir, atau hadis."
     },
      {
         id: 2,
-        title: "Follow the Study Path",
-        description: "Start with the Kitab Pelajaran section. Begin at the Dasar (beginner) level and progress through each book with your teacher."
-    },
+        title: "Ikuti Jalur Kitab Dars",
+        description: "Pelajari kitab pelajaran secara bertahap,dimulai dari tingkat dasar bersama guru."
+     },
      {
         id: 3,
-        title: "Supplement Your Learning",
-        description: "Explore the Kitab Muthala'ah for additional reading that complements your structured studies."
+        title: "Lengkapi dengan Kitab Muthala‘ah",
+        description: "Gunakan kitab muthala‘ah sebagai bacaan tambahan untuk memperluas dan memperdalam pemahaman."
     },
     {
         id: 4,
-        title: "Track Your Progress",
-        description: "Use the checkboxes to mark books as completed and bookmark enrichment books for later reading."
+        title: "Gunakan Sebagai Panduan, Bukan Target",
+        description: "Peta ini membantu menjaga arah belajar,bukan untuk mengejar “penyelesaian” semata."
     }
 ]
 
@@ -36,7 +36,7 @@ const HowToUse = () => {
   return (
     <Stack>
         <Typography variant="h6" fontWeight={600}>
-            How to Use This Platform
+            Cara Menggunakan Peta Ilmu Islam
         </Typography>
 
         <Stack spacing={2} sx={{mt: 2, mb: 8}}>

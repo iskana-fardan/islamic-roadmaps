@@ -12,18 +12,18 @@ interface Note {
 const notes : Note[] = [
     {
         id: 1,
-        title: "Seek qualified teachers:",
-        description: "Islamic knowledge is traditionally transmitted through teacher-student relationships. These roadmaps are guides, not replacements for proper instruction."
+        title: "Utamakan guru:",
+        description: "Ilmu Islam ditransmisikan melalui hubungan guru dan murid. Peta ini adalah panduan, bukan pengganti talaqqi."
     },
     {
         id: 2,
-        title: "Be patient:  ",
-        description: "Mastering Islamic sciences takes years of dedicated study. Focus on deep understanding rather than rushing through texts."
+        title: "Bersabar dalam menuntut ilmu:",
+        description: "Menguasai ilmu membutuhkan waktu, ketekunan, dan kedalaman,bukan kecepatan."
     },
     {
         id: 3,
-        title: "Regional variations:",
-        description: " Different regions and institutions may have slightly different curricula. Consult with local scholars for guidance specific to your context."
+        title: "Perbedaan kurikulum adalah hal wajar:",
+        description: "Setiap daerah dan lembaga bisa memiliki urutan kitab yang berbeda.Gunakan peta ini sesuai konteks dan bimbingan guru setempat."
     }
 ]
 
@@ -32,7 +32,7 @@ const ImportantNotes = () => {
   return (
      <Stack>
         <Typography variant="h6" fontWeight={600}>
-                Important Notes
+                Catatan Penting
         </Typography>
         <Card sx={{ mt: 2, mb: 8 }} variant="outlined">
             <CardContent

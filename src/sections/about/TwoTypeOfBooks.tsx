@@ -13,27 +13,27 @@ interface BookCard {
 
 const cardItems: BookCard[] = [
   {
-    title: "Kitab Pelajaran",
-    highlight: "Study Books",
+    title: "Kitab Dars",
+    highlight: "Kitab dars",
     description:
-      "are the core curriculum texts that should be studied sequentially with a qualified teacher. They form the backbone of traditional Islamic education and are designed to build knowledge progressively from basic concepts to advanced discussions.",
+      "merupakan kitab inti dalam kurikulum keilmuan Islam yang dipelajari secara bertahap bersama guru.Kitab-kitab ini membentuk fondasi ilmu dan disusun dari tingkat dasar hingga lanjutan.",
     icon: MenuBookOutlined,
     lists: [
-      "Study with a qualified teacher",
-      "Follow the sequence: Dasar → Menengah → Lanjutan",
-      "Master each level before proceeding",
+      "Dipelajari bersama guru yang kompeten",
+      "Mengikuti urutan tingkat: Dasar → Menengah → Lanjutan",
+      "Tidak berpindah sebelum memahami tahap sebelumnya",
     ],
   },
   {
     title: "Kitab Muthala'ah",
-    highlight: "Reading & Enrichment Books",
+    highlight: "Kitab Muthala'ah",
     description:
-      "are supplementary texts for expanding knowledge and gaining deeper insights. Unlike study books, these can be read independently and in any order based on interest and need.",
+      "adalah bacaan pengayaan yang bertujuan memperluas wawasan dan memperdalam pemahaman.Berbeda dengan kitab pelajaran, kitab muthala‘ah dapat dibaca secara mandiri dan tidak terikat urutan tertentu.",
     icon: AutoStoriesOutlined,
     lists: [
-      "Can be read independently",
-      "No required sequence",
-      "For insight and breadth of knowledge",
+      "Dapat dibaca secara fleksibel",
+      "Tidak terikat kurikulum berjenjang",
+      "Bertujuan memperluas dan memperdalam ilmu",
     ],
   },
 ];
@@ -46,7 +46,7 @@ const TwoTypeOfBooks = () => {
     return (
         <Stack spacing={3} sx={{ mb:8 }}>
                     <Typography variant="h6"  fontWeight={600} color="text.primary">
-                        Understanding the Two Types of Books
+                        Memahami Dua Jenis Kitab
                     </Typography>
                     <Grid container spacing={3}>
                         {/* Kitab Pelajaran */}

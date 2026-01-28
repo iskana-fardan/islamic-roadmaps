@@ -4,13 +4,20 @@ const Contribution = () => {
   return (
     <Stack spacing={2} sx={{mb: 8}}>
         <Typography variant='h6' fontWeight={600} color='text.primary'>
-            Contributing
+            Kontribusi
         </Typography>
         <Typography color='text.secondary'>
-            This project is open to contributions from scholars, students, and educators. If you have suggestions for improving the roadmaps, adding books, or correcting information, please reach out through our contact channels.
+            Peta Ilmu Islam merupakan inisiatif terbuka
+            yang dapat dikembangkan bersama oleh penuntut ilmu, pengajar,
+            dan siapa pun yang peduli terhadap keberlangsungan tradisi keilmuan Islam.
         </Typography>
         <Typography color='text.secondary'>
-            May Allah bless all seekers of sacred knowledge and grant them success in their studies.
+            Jika Anda memiliki saran perbaikan, tambahan kitab,
+            atau koreksi informasi, silakan menghubungi kami melalui kanal yang tersedia.
+        </Typography>
+        <Typography color='text.secondary'>
+            Semoga Allah memberkahi setiap langkah dalam menuntut ilmu
+dan         menjadikannya ilmu yang bermanfaat.
         </Typography>
     </Stack>
   )

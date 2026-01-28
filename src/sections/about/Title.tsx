@@ -24,16 +24,17 @@ const Title = () => {
         >
           <ArrowBackRoundedIcon fontSize='inherit' />
           <Typography ml={1.2} fontSize= "0.75rem">
-            Back to Home
+            Kembali ke Beranda
           </Typography>
         </IconButton>
     </Stack>
     <Stack spacing={2} sx={{mb:6}}>
           <Typography variant="h4" fontWeight={600} color="text.primary"> 
-              About Islamic Learning Roadmaps
+              Tentang Peta Ilmu Islam
           </Typography>
           <Typography color="text.secondary" fontSize={"1.2rem"}>
-              A structured guide to navigating the traditional Islamic curriculum
+              Panduan terstruktur untuk menapaki kurikulum keilmuan Islam
+              berdasarkan tradisi ulama.
           </Typography>
     </Stack>
     </>
