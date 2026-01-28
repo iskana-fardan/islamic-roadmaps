@@ -37,7 +37,7 @@ export default function CollaboratorsSection() {
           >
             <ArrowBackRoundedIcon fontSize="small" />
             <Typography ml={1} fontSize="0.8rem">
-              Back to Home
+              Kembali ke Beranda
             </Typography>
           </IconButton>
         </Stack>
@@ -50,12 +50,22 @@ export default function CollaboratorsSection() {
               fontWeight: 800,
             }}
           >
-            Kolaborator
+            Para Kontributor
           </Typography>
           <Typography color="text.secondary" maxWidth={720} mx="auto">
-            Proyek ini dikembangkan bersama orang-orang yang peduli dan memiliki
-            keahlian di bidangnya. Ini adalah inisiatif independen yang dibangun
-            atas semangat berbagi ilmu.
+            Proyek ini dikembangkan bersama para penuntut ilmu dan kontributor
+            yang peduli terhadap keberlangsungan tradisi keilmuan Islam.
+          </Typography>
+
+          <Typography color="text.secondary" maxWidth={720} mx="auto">
+            Setiap kontribusi yang diberikan—baik dalam bentuk penulisan, peninjauan,
+            maupun pengembangan teknis—merupakan bagian dari ikhtiar kolektif
+            untuk menghadirkan peta belajar yang lebih terarah dan bermanfaat.
+          </Typography>
+
+          <Typography color="text.secondary" maxWidth={720} mx="auto">
+            Ini adalah inisiatif independen yang dibangun atas semangat berbagi ilmu
+            dan saling menasihati dalam kebaikan.
           </Typography>
         </Stack>
 
@@ -86,10 +96,12 @@ export default function CollaboratorsSection() {
             <FavoriteBorderOutlinedIcon fontSize="large" />
           </Box>
           <Typography fontWeight={600}>
-            Terima kasih kepada semua yang telah meluangkan waktu dan ilmunya.
+            Terima kasih kepada seluruh kontributor
+            yang telah meluangkan waktu, tenaga, dan ilmunya
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Semoga menjadi amal jariyah bagi para kontributor.
+            Semoga setiap kontribusi yang diberikan
+            dicatat sebagai amal jariyah dan diberkahi oleh Allah Ta‘ala.
           </Typography>
         </Box>
       </Container>
