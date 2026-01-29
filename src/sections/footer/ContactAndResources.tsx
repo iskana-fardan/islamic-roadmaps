@@ -1,5 +1,6 @@
 import { Grid, Link, Stack, Typography } from "@mui/material"
 import { LuGithub, LuMail } from "react-icons/lu";
+import { NavLink } from "react-router-dom";
 
 const ContactAndResources = () => {
   return (
@@ -11,6 +12,15 @@ const ContactAndResources = () => {
 
 
             <Stack spacing={1.5} sx={{ color: "text.secondary" }}>
+                <Stack>
+                  <Link
+                    component={NavLink}
+                    to={"/kolaborasi"}
+                    variant="body2" 
+                    sx={{ textDecoration: 'none',color: "text.secondary" }}>
+                    Kontributor Kami
+                  </Link>
+                </Stack>
                 <Stack direction="row" spacing={1.5} alignItems="center">
                   <LuGithub fontSize={"medium"}/>
                   <Link
