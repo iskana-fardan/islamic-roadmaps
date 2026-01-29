@@ -192,7 +192,7 @@ berdasarkan tradisi keilmuan ulama.`}
               Kitab Dars
             </Typography>
             <Typography color="text.secondary">
-              Jalur belajar utama — dipelajari secara bertahap bersama guru
+            Jalur belajar utama. Klik kitab untuk melihat penjelasan lengkap, cetakan yang direkomendasikan, dan referensi belajar.
             </Typography>
           </Stack>
         </Stack>
@@ -225,7 +225,7 @@ berdasarkan tradisi keilmuan ulama.`}
               Kitab Muthala'ah
             </Typography>
             <Typography color="text.secondary">
-              Bacaan pengayaan dan pendalaman di luar jalur pelajaran utama
+              Bacaan pengayaan dan pendalaman. Klik kitab untuk melihat penjelasan dan referensi pendukung
             </Typography>
           </Stack>
         </Stack>

@@ -1,7 +1,8 @@
-import { Grid, Card, CardContent, Stack, Typography, Chip, useTheme, CardActionArea, IconButton } from "@mui/material"
+import { Grid, Card, CardContent, Stack, Typography, Chip, useTheme, CardActionArea, IconButton, Box } from "@mui/material"
 import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlined';
 import BookOutlinedIcon from '@mui/icons-material/BookOutlined';
 import BookmarkOutlinedIcon from '@mui/icons-material/BookmarkOutlined';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { useState } from "react";
 import type { Book } from "../../types/book";
 import BookDetail from "../books/BookDetail";
@@ -78,13 +79,34 @@ const KitabMuthalaahCard = ({books}:Props) => {
                                 sx={{ borderRadius: "5px" }} 
                                 />
                           </Stack>
+
+                           {/* CTA */}
+                          <Box>
+                              <IconButton
+                                  disableRipple
+                                  sx={{ 
+                                      color: theme.palette.teal[100],
+                                      borderRadius:"5px",
+                                      mt: 1,
+                                      "&:hover": {
+                                          backgroundColor: "rgba(100,100,100,0.1)",
+                                      },
+                                      fontSize: "1rem"
+                                  }}
+                                  
+                              >
+                                  <Typography variant="caption" mr={0.5}>
+                                    Lihat Penjelasan
+                                  </Typography>
+                                  <ArrowForwardIcon sx={{ "&:hover": { transform: "translateX(2px)" } }} fontSize="inherit"/>
+                              </IconButton>
+                          </Box>
                       </CardContent>
                 </CardActionArea>
                 <BookDetail book={book} open={open} onClose={()=>setOpen(false)}/>
               </Card>
               ))}
             </Grid>
-            {/* lanjut sendiri */}
     </Grid>
   )
 }

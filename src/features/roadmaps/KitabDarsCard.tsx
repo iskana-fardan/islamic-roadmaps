@@ -4,9 +4,11 @@ import {
   CardActionArea,
   CardContent,
   Checkbox,
+  IconButton,
   Typography,
   useTheme,
 } from "@mui/material"
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded"
 import type { Book } from "../../types/book"
 import BookDetail from "../books/BookDetail"
@@ -112,6 +114,28 @@ const KitabDarsCard = ({books}: Props) => {
               >
                 {book?.author}
               </Typography>
+
+              {/* CTA */}
+              <Box>
+                  <IconButton
+                      disableRipple
+                      sx={{ 
+                          color: theme.palette.teal[100],
+                          borderRadius:"5px",
+                          mt:1,
+                          "&:hover": {
+                              backgroundColor: "rgba(100,100,100,0.1)",
+                          },
+                          fontSize: "1rem"
+                      }}
+                      
+                  >
+                      <Typography variant="caption" mr={0.5}>
+                        Lihat Detail
+                      </Typography>
+                      <ArrowForwardIcon sx={{ "&:hover": { transform: "translateX(2px)" } }} fontSize="inherit"/>
+                  </IconButton>
+              </Box>
             </Box>
 
             {/* Hover Arrow */}
