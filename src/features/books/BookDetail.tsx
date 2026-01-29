@@ -140,7 +140,7 @@ const BookDetail = ({book,open, onClose}: Props) => {
                 {/* === Meta ===*/}
                 <Stack spacing={1} mb={3}>
                     <Typography variant="caption" color="text.secondary">
-                        Author
+                        Pengarang
                     </Typography>
                     <Typography variant="body1">
                         {book?.author}
@@ -156,7 +156,7 @@ const BookDetail = ({book,open, onClose}: Props) => {
                         color="text.secondary"
                         gutterBottom
                     >
-                        Description
+                        Gambaran Umum
                     </Typography>
                     <Typography variant="body2">
                         {book?.description}
@@ -173,7 +173,7 @@ const BookDetail = ({book,open, onClose}: Props) => {
                         color="text.secondary"
                         gutterBottom
                     >
-                        Recommended Usage
+                        Cara Belajar yang Disarankan
                     </Typography>
                     <Typography variant="body2">
                         {book?.recommendedUsage}
@@ -190,7 +190,7 @@ const BookDetail = ({book,open, onClose}: Props) => {
                         variant="caption"
                         color="text.secondary"
                     >
-                        Recommended Editions
+                        Pilihan Cetakan Rekomendasi
                     </Typography>
 
                     <Stack spacing={1.5}>
@@ -256,7 +256,7 @@ const BookDetail = ({book,open, onClose}: Props) => {
                         variant="caption"
                         color="text.secondary"
                     >
-                        Resources
+                        Referensi Pembelajaran
                     </Typography>
 
                     <Stack direction="row" spacing={1} mt={1}>
@@ -285,7 +285,7 @@ const BookDetail = ({book,open, onClose}: Props) => {
                                 }}
                             >
                                 <Typography sx={{ fontSize: 'small',pt:0.5,fontWeight:550 }}>
-                                    {resource.type === 'pdf' ? 'PDF Version' : 'Explanation Series'}
+                                    {resource.type === 'pdf' ? 'Kitab (PDF)' : 'Seri Penjelasan Kitab'}
                                 </Typography>
                             </Button>
                         ))}
